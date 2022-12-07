@@ -1,0 +1,37 @@
+.hedi--404-page {
+  padding-top: $spacing-07;
+}
+.hedi--group--404 {
+  h1 {
+    margin-bottom: $spacing-06;
+  }
+}
+
+.hedi--404 {
+  padding-top: $spacing-12;
+  @include carbon--breakpoint-down("md") {
+    padding-top: $spacing-07;
+  }
+  &__image-container {
+    margin: 0 auto;
+    width: 256px;
+    @include carbon--breakpoint-down("md") {
+      width: 200px;
+    }
+  }
+  &__body {
+    > p {
+      margin-bottom: $spacing-05;
+      @include carbon--breakpoint-down("md") {
+        @include carbon--type-style("body-long-01");
+
+        a {
+          @include carbon--type-style("body-long-01");
+        }
+      }
+    }
+  }
+  > * {
+    margin-bottom: $spacing-08;
+  }
+}

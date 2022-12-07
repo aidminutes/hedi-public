@@ -1,0 +1,21 @@
+.hedi--tag-list {
+  .headline {
+    @include carbon--font-family("sans");
+    color: $orange-primary;
+  }
+
+  .hedi--tag {
+    @include carbon--type-style("body-long-02");
+    display: inline-flex;
+    margin-bottom: $spacing-02;
+
+    &__checkmark {
+      color: $orange-primary;
+      margin-inline-end: $spacing-03;
+    }
+
+    &:not(:last-child) {
+      margin-inline-end: $spacing-05;
+    }
+  }
+}

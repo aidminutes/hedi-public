@@ -1,0 +1,40 @@
+.hedi--search__filter {
+  padding: 1rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  .bx--form-item.bx--checkbox-wrapper:first-of-type {
+    margin-top: 0;
+  }
+  > * {
+    flex: none;
+    margin: 0 0 0 $spacing-07;
+  }
+  fieldset {
+    height: 100%;
+    > div {
+      float: left;
+      margin-inline-end: $spacing-07;
+    }
+  }
+
+  &--button {
+    background-color: $orange-40;
+    &:hover {
+      background-color: $orange-50 !important;
+    }
+  }
+
+  &__multiselect {
+    @extend .hedi--multiselect;
+    margin-bottom: $spacing-07;
+
+    .bx--multi-select__wrapper > .bx--label:first-of-type {
+      display: none;
+    }
+  }
+
+  &__services-title {
+    margin-bottom: $spacing-05;
+  }
+}

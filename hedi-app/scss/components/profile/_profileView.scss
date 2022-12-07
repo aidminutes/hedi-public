@@ -1,0 +1,95 @@
+.hedi--profile {
+  &__info-area {
+    margin-bottom: $spacing-07;
+    p {
+      @include type-style("body-long-01");
+      @include carbon--breakpoint-up("md") {
+        max-width: 60%;
+      }
+    }
+  }
+
+  &__info-item {
+    margin-bottom: $spacing-05;
+
+    &-label {
+      color: $gray-50;
+      &--hint {
+        align-items: center;
+        color: $blue-40;
+        display: inline-flex;
+        font-size: 12px;
+        margin-inline-start: $spacing-03;
+        svg {
+          margin-inline-end: $spacing-02;
+        }
+      }
+    }
+  }
+
+  &__image {
+    max-width: 160px;
+
+    img {
+      border-radius: 160px;
+    }
+
+    &-container {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  .hedi--white-box {
+    margin-top: $spacing-06;
+  }
+
+  .bx--structured-list-row {
+    border-bottom: none;
+  }
+
+  .hedi--hedi-card__base__text {
+    @include carbon--breakpoint-down("md") {
+      text-align: center;
+      align-self: center;
+    }
+  }
+
+  &__change-entry-link {
+    display: flex;
+    align-items: center;
+    margin: $spacing-06 0;
+
+    svg {
+      fill: $blue-primary;
+      margin-inline-end: $spacing-03;
+    }
+  }
+
+  &__headline {
+    &--wrap {
+      display: flex;
+      align-items: center;
+      margin-bottom: $spacing-03;
+    }
+    &--icon {
+      color: $blue-40;
+      margin-inline-end: $spacing-03;
+    }
+  }
+
+  @include carbon--breakpoint-down("md") {
+    h3 {
+      @include type-style("productive-heading-03");
+    }
+  }
+}
+
+.hedi--profileServices-page {
+  .hedi--user-tile {
+    @include carbon--breakpoint-up("md") {
+      height: 100%;
+    }
+  }
+}

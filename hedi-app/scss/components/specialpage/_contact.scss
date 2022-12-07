@@ -1,0 +1,45 @@
+.hedi--contact-page {
+  background-color: #fff;
+
+  h1 {
+    margin-bottom: $spacing-07;
+  }
+
+  &__wrap {
+    padding: $spacing-07 0;
+  }
+
+  &__title {
+    margin: $spacing-05 0;
+  }
+  &-emails {
+    margin-top: $spacing-07;
+
+    p {
+      margin-bottom: $spacing-05;
+    }
+
+    .bx--link {
+      display: inline;
+    }
+  }
+
+  &__image-column {
+    padding: $spacing-07 0;
+    > div > div {
+      max-height: 30vh;
+    }
+
+    &--wrap {
+      background-color: $blue-10;
+    }
+  }
+  &__more {
+    @include carbon--breakpoint-down("md") {
+      margin-top: $spacing-07;
+    }
+    p {
+      margin-bottom: $spacing-05;
+    }
+  }
+}

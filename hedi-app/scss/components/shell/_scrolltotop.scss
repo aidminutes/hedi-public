@@ -1,0 +1,24 @@
+.hedi--scroll-to-top {
+  button.bx--btn.bx--btn--icon-only.bx--tooltip__trigger {
+    background-color: $blue-80;
+    border-radius: 50%;
+    bottom: $spacing-06;
+    color: $text-04;
+    cursor: pointer;
+    text-align: center;
+    position: fixed;
+    right: $spacing-05;
+    transition: 0.5s;
+    z-index: 4;
+    &:hover {
+      background: $blue-60;
+    }
+  }
+
+  &__bottom {
+    button.bx--btn.bx--btn--icon-only.bx--tooltip__trigger {
+      bottom: ($spacing-08 * 2);
+    }
+  }
+  @include hideInPrint();
+}

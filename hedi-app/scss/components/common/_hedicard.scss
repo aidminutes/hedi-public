@@ -1,0 +1,203 @@
+.hedi--hedi-card {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  padding: $spacing-03 $spacing-05 $spacing-05;
+  height: max-content;
+  hyphens: auto;
+
+  &:not(:last-child) {
+    margin-bottom: $spacing-04;
+  }
+
+  &__base {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: $spacing-05;
+    position: relative;
+    @include carbon--breakpoint-down("md") {
+      flex-direction: column;
+    }
+
+    &__img-container {
+      width: 56px;
+      height: 56px;
+      margin-inline-end: $spacing-05;
+      flex-shrink: 0;
+
+      img {
+        border-radius: 56px;
+      }
+
+      @include carbon--breakpoint-down("md") {
+        margin-inline-end: 0;
+        margin-top: $spacing-08;
+      }
+    }
+
+    &__text {
+      align-self: center;
+      position: relative;
+      top: -2px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100%;
+
+      .hedi--hedi-card__base__text__title-link {
+        @include type-style("productive-heading-04");
+        @include carbon--breakpoint-down("md") {
+          @include type-style("productive-heading-02");
+        }
+        text-decoration: none !important;
+      }
+      @include carbon--breakpoint-down("md") {
+        align-self: start;
+        margin-top: $spacing-05;
+      }
+
+      &__label {
+        color: $pink-60;
+        @include type-style("body-short-02");
+        margin-bottom: $spacing-03;
+      }
+
+      &__title {
+        @include type-style("productive-heading-04");
+        @include carbon--breakpoint-down("md") {
+          @include type-style("productive-heading-04");
+        }
+      }
+
+      &__subtitle {
+        @include type-style("body-short-01");
+        margin-top: $spacing-01;
+        color: $gray-80;
+      }
+
+      &__icon-prefix {
+        position: relative;
+        top: 2px;
+        margin-inline-end: $spacing-03;
+      }
+    }
+
+    // Status design is not finalized. This is developer art.
+    &__status {
+      padding: $spacing-03 $spacing-04;
+      height: 100%;
+      min-width: 200px;
+      color: black;
+      align-self: center;
+
+      @include carbon--breakpoint-down("md") {
+        align-self: start;
+        padding: $spacing-05 0;
+      }
+    }
+
+    &__expander {
+      display: flex;
+      align-items: center;
+      svg {
+        cursor: pointer;
+      }
+    }
+
+    &__interaction-area {
+      align-self: center;
+      width: 253px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-between;
+      margin-inline-start: auto;
+      flex-shrink: 0;
+      padding-right: $spacing-03;
+
+      @include carbon--breakpoint-down("md") {
+        align-self: start;
+        align-items: start;
+        width: 100%;
+      }
+
+      &__icon {
+        align-self: flex-end;
+        justify-self: flex-end;
+      }
+
+      .hedi--button-container {
+        width: 100%;
+      }
+
+      .bx--btn {
+        padding-left: $spacing-04;
+        padding-right: $spacing-04;
+        width: 100%;
+        text-align: center;
+        display: flex;
+        justify-content: flex-end;
+        gap: $spacing-02;
+
+        @include carbon--breakpoint-down("md") {
+          width: 75%;
+        }
+      }
+
+      .bx--btn__icon {
+        position: unset;
+      }
+
+      .bx--btn--tertiary {
+        border-width: 0px;
+      }
+
+      .bx--btn--primary {
+        background-color: transparent;
+        :not(:disabled) {
+          color: $blue-primary;
+        }
+      }
+    }
+  }
+  &__separator {
+    border-top: none;
+    color: $gray-30;
+    width: 60%;
+    margin: $spacing-02 0;
+    @include carbon--breakpoint-down("md") {
+      width: 100%;
+    }
+  }
+
+  &__details {
+    margin-top: $spacing-02;
+    //display: grid;
+    //grid-template-columns: 1fr;
+    //grid-row-gap: $spacing-05;
+    //grid-auto-flow: dense;
+    //@include carbon--breakpoint-up("sm") {
+    //  grid-row-gap: $spacing-05;
+    //}
+    //@include carbon--breakpoint-up("md") {
+    //  grid-template-columns: 47.5% 47.5%;
+    //  grid-column-gap: 5%;
+    //}
+    //@include carbon--breakpoint-up("lg") {
+    //  grid-template-columns: 25% 70%;
+    //  grid-column-gap: 5%;
+    //  grid-row-gap: $spacing-06;
+    //}
+    //&__column {
+    //  display: flex;
+    //  flex-direction: column;
+    //  >*:not(:first-child) {
+    //    margin-top: $spacing-05;
+    //    @include carbon--breakpoint-up("lg") {
+    //      margin-top: $spacing-06;
+    //    }
+    //  }
+    //}
+  }
+}

@@ -1,0 +1,41 @@
+.hedi--searchMidwifeEntry-page {
+  background-color: #fff;
+  min-height: 90vh;
+}
+
+.hedi--search-midwife-entry {
+  &__headline {
+    margin-bottom: $spacing-09;
+    @include carbon--breakpoint-down("md") {
+      margin-bottom: $spacing-06;
+    }
+  }
+
+  &__datepicker {
+    width: 100%;
+    .bx--date-picker-container {
+      width: 100%;
+      .bx--date-picker__input {
+        width: 100%;
+      }
+    }
+  }
+
+  &__multiselect {
+    @extend .hedi--multiselect;
+    position: relative;
+  }
+  &__tooltip {
+    position: absolute;
+    top: 25px;
+    right: -25px;
+  }
+  &__inline-loading {
+    .bx--inline-loading {
+      justify-content: center;
+    }
+  }
+  &__footer-image {
+    width: 160px;
+  }
+}

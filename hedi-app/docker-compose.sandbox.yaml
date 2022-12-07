@@ -1,0 +1,25 @@
+version: "3.7"
+
+networks:
+  hedi-web:
+    external: true
+
+services:
+  node:
+    image: "node:14"
+    container_name: "HEDI_APP_sandbox"
+    restart: unless-stopped
+    networks:
+      - hedi-web
+    environment:
+      - NODE_ENV=production
+    working_dir: /home/node/app
+    volumes:
+      - .:/home/node/app
+      - ./../hedi-cms/app/web/sites/default/files/assets/uploads:/home/node/uploads
+    command: bash -c "yarn install && date && yarn start -p 4545 2>&1 | tee hedi_app_sandbox-$$(date +%Y%m%d_%H-%M).log"
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.HEDI_APP_sandbox.entrypoints=web
+      - traefik.http.routers.HEDI_APP_sandbox.rule=Host(`sandbox.projekt-hedi.de`)
+      - traefik.http.services.HEDI_APP_sandbox.loadbalancer.server.port=4545

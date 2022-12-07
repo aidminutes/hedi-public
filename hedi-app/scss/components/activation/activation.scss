@@ -1,0 +1,32 @@
+.hedi--activate_account-page {
+  background-color: #fff;
+  min-height: 90vh;
+}
+
+.hedi--activation {
+  @include carbon--breakpoint-up("md") {
+    padding-top: $spacing-12;
+  }
+  &__image {
+    width: 160px;
+
+    &-wrap {
+      display: flex;
+      justify-content: center;
+    }
+    &-caption {
+      color: $blue-50;
+      font-size: 0.75rem;
+      margin-bottom: $spacing-09;
+    }
+  }
+
+  &__text{
+    ul {
+      list-style: disc;
+      list-style-position: inside;
+      margin: 0 0 $spacing-05 0;
+
+    }
+  }
+}

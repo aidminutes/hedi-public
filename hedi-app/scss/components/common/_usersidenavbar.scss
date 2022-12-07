@@ -1,0 +1,123 @@
+.hedi--user-sidenavbar {
+  @include carbon--breakpoint-down("md") {
+    display: none;
+  }
+  .bx--side-nav {
+    background-color: #fff;
+  }
+  &__action-wrap {
+    display: flex;
+    justify-content: center;
+    left: 0;
+    position: fixed;
+    top: 3.5rem;
+    width: $spacing-09;
+    z-index: 3;
+    // &--expanded {
+    //   // width: 17rem;
+    // }
+  }
+  &__navlink {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  &__action {
+    background-color: #fff;
+    // border-radius: 50px;
+    padding: $spacing-01;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .bx--side-nav__navigation {
+    z-index: 2;
+  }
+
+  &__above {
+    // margin-top: $spacing-10;
+    padding: $spacing-06 $spacing-05 0;
+    margin-bottom: $spacing-05;
+  }
+
+  &__contact-area {
+    align-items: center;
+    display: flex;
+    height: 45px;
+  }
+  &__user-image {
+    min-width: 16px;
+    margin-inline-end: $spacing-05;
+    max-width: 40px;
+    transition: width 0.5s linear;
+  }
+
+  &__user-text {
+    transition: visibility 0s, opacity 0.5s linear;
+  }
+
+  &__navlink--active {
+    background-color: $gray-20;
+    > .bx--side-nav__link-text {
+      color: $gray-100;
+      font-weight: 600;
+    }
+    &::before {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: 4px;
+      background-color: #0f62fe;
+      content: "";
+    }
+  }
+  .bx--side-nav__link-text {
+    align-items: center;
+    display: flex;
+    svg {
+      margin-inline-end: 1.5rem;
+    }
+  }
+}
+
+.bx--side-nav--rail {
+  .hedi--user-sidenavbar {
+    &__user-text {
+      visibility: hidden;
+      opacity: 0;
+    }
+    &__user-image {
+      max-width: 32px;
+      margin-inline-end: unset;
+      img {
+        max-width: 16px;
+        border-radius: 32px;
+        margin-inline-end: unset;
+      }
+    }
+  }
+}
+
+.bx--side-nav--rail.bx--side-nav--expanded {
+  .hedi--user-sidenavbar {
+    &__user-text {
+      visibility: visible;
+      opacity: 1;
+    }
+    &__user-image {
+      max-width: 40px;
+      width: 40px;
+      margin-inline-end: $spacing-05;
+      img {
+        border-radius: 40px;
+        max-width: 40px;
+      }
+    }
+  }
+}
+
+.bx--side-nav__overlay {
+  display: none;
+}

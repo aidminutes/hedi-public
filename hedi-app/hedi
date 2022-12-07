@@ -1,0 +1,116 @@
+#!/bin/bash
+
+if [[ $# == 0 ]]; then
+  echo "$(<./script/help.md )"
+fi
+
+START_DATE=$(date +%s)
+
+UNKNOWN=()
+while [[ $# -gt 0 ]]; do
+  key="$1"
+  case $key in
+    -n|--online-cms)
+      shift
+      if [[ $# -gt 0 && $1 != -* ]] ; then
+        ONLINE="$1"
+        shift
+      else
+        ONLINE=true
+      fi
+      ;;
+    -o|--offline-cms)
+      shift
+      if [[ $# -gt 0 && $1 != -* ]] ; then
+        OFFLINE="$1"
+        shift
+      else
+        OFFLINE=true
+      fi
+      ;;
+    --sandbox)
+      shift
+      if [[ $# -gt 0 && $1 != -* ]] ; then
+        SANDBOX="$1"
+        shift
+      else
+        SANDBOX=true
+      fi
+      ;;
+    -s|--staging)
+      shift
+      if [[ $# -gt 0 && $1 != -* ]] ; then
+        STAGING="$1"
+        shift
+      else
+        STAGING=true
+      fi
+      ;;
+    --testchat)
+      shift
+      if [[ $# -gt 0 && $1 != -* ]] ; then
+        TESTCHAT="$1"
+        shift
+      else
+        TESTCHAT=true
+      fi
+      ;;
+    --production)
+      shift
+      if [[ $# -gt 0 && $1 != -* ]] ; then
+        PRODUCTION="$1"
+        shift
+      else
+        PRODUCTION=true
+      fi
+      ;;
+    --refresh)
+      shift
+      if [[ $# -gt 0 && $1 != -* ]] ; then
+        BACKEND="$1"
+        shift
+      else
+        BACKEND=true
+      fi
+      ;;
+    --view)
+      shift
+      VIEW=true
+      ;;
+    *)
+      UNKNOWN+=("$1")
+      shift
+      ;;
+  esac
+done
+
+if [[ $BACKEND ]]; then
+  echo ">>>>> backend"
+  cd ../hedi-cms
+  git reset --hard HEAD
+  sh hedi --update
+  cd ../hedi-app
+  echo ">>>>> app"
+  ./script/offline.sh $BACKEND
+fi
+
+./script/online.sh $ONLINE
+./script/offline.sh $OFFLINE
+./script/sandbox.sh $SANDBOX
+./script/staging.sh $STAGING
+./script/testchat.sh $TESTCHAT
+./script/production.sh $PRODUCTION
+
+if [[ $VIEW == true ]]; then
+  echo ">>> view latest app locally"
+  git checkout main
+  git pull
+
+fi
+
+if [[ ${#UNKNOWN[@]} -gt 0 ]]; then
+  echo ">>> unknown arguments ${UNKNOWN[@]}"
+fi
+
+DIFF=$(date -d @$(($(date +%s)-$START_DATE)) +"%Mmin %Ssec")
+echo ">>> $DIFF done, bye!"

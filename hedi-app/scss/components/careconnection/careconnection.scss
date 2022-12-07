@@ -1,0 +1,10 @@
+@import "./direct";
+
+.hedi--care-connection {
+  margin-bottom: $spacing-10;
+  &__withdrawn-hint {
+    @include type-style("body-short-01");
+    color: $gray-50;
+    margin: $spacing-05 0;
+  }
+}

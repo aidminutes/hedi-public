@@ -1,0 +1,26 @@
+.hedi--menu-header {
+  background-color: #fff;
+  margin-top: 4.25rem;
+  margin-bottom: $spacing-08;
+
+  &__wrap {
+    background-color: #fff;
+  }
+
+  &__title {
+    margin-bottom: $spacing-03;
+  }
+  &__image-container {
+    position: relative;
+  }
+  &__image {
+    width: 144px;
+    @include carbon--breakpoint-up("md") {
+      position: absolute;
+      top: 8px;
+    }
+    @include carbon--breakpoint-down("lg") {
+      display: none;
+    }
+  }
+}

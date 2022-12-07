@@ -1,0 +1,18 @@
+.hedi--privacy-page {
+  ul,
+  ol {
+    list-style-position: inside;
+    margin: 0 0 $spacing-05 0;
+
+    li {
+      line-height: 1.6em;
+    }
+  }
+
+  ul {
+    list-style: disc;
+  }
+  ol {
+    list-style: decimal;
+  }
+}

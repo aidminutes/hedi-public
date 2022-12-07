@@ -1,0 +1,28 @@
+.hedi--list-accordion {
+  margin-bottom: $spacing-03;
+
+  .bx--accordion__item {
+    border-bottom: none;
+    border-top: none;
+  }
+  .bx--accordion__heading {
+    background-color: $blue-10 !important;
+    &:hover::before {
+      background-color: $blue-20;
+    }
+  }
+  &__elements {
+    list-style: disc;
+    list-style-position: outside;
+    li {
+      font-size: 14px;
+      margin-bottom: 0.5rem;
+      line-height: 1.4rem;
+    }
+  }
+
+  &__empty-state-text {
+    color: $gray-50;
+    font-size: 0.75rem;
+  }
+}

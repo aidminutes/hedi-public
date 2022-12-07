@@ -1,0 +1,238 @@
+.hedi--midwife-care-request-view {
+  .hedi--hedi-card__base {
+    margin-top: $spacing-05;
+  }
+
+  .hedi--hedi-card {
+    background-color: transparent;
+  }
+  .hedi--user-tile {
+    @include carbon--breakpoint-up("md") {
+      // height: 100%;
+    }
+  }
+
+  .bx--tab-content {
+    padding: 0;
+    padding-top: $spacing-08;
+  }
+
+  &__date {
+    @include carbon--type-style("body-short-01");
+    color: $gray-70;
+  }
+
+  &__midwife-link {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__state-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: $spacing-06 0;
+
+    .bx--tag {
+      min-width: 60px;
+    }
+    @include carbon--breakpoint-down("md") {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .hedi--midwife-care-request-view__updated {
+      @include carbon--type-style("helper-text-01");
+      margin-right: $spacing-05;
+      min-width: 110px;
+      font-weight: 400;
+      color: $gray-50;
+    }
+
+    > div {
+      display: flex;
+      align-items: center;
+      @include carbon--breakpoint-down("md") {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      p {
+        @include carbon--type-style("helper-text-01");
+        font-weight: 400;
+        color: $gray-80;
+      }
+    }
+  }
+
+  &__personal-body {
+    @include carbon--breakpoint-up("md") {
+      width: 70%;
+    }
+    p {
+      @include carbon--type-style("body-long-01");
+    }
+  }
+
+  &__button-container {
+    margin-top: $spacing-07;
+    margin-bottom: $spacing-07;
+    > button:not(:last-child) {
+      margin-inline-end: $spacing-05;
+    }
+    @include carbon--breakpoint-down("md") {
+      margin-bottom: $spacing-12;
+      button {
+        width: 100%;
+        &:first-child {
+          margin-bottom: $spacing-05;
+        }
+      }
+    }
+  }
+
+  &__profile-body {
+    p {
+      @include carbon--type-style("body-long-01");
+    }
+  }
+  &__label {
+    @extend .bx--label;
+    margin-bottom: $spacing-03;
+  }
+
+  &__answer {
+    @include carbon--type-style("body-short-01");
+  }
+
+  &__labeled-list {
+    margin-bottom: $spacing-06;
+    li {
+      @include carbon--type-style("body-short-01");
+    }
+  }
+
+  &__profile-links {
+    margin-bottom: $spacing-08;
+    a {
+      display: block;
+
+      &:after {
+        content: url("../public/svg/arrow--up-right.svg");
+        margin: 0px 0px 0px 2px;
+        font-size: 1.1rem;
+        display: inline-block;
+        width: 16px;
+      }
+    }
+  }
+  &__list {
+    ul {
+      list-style: disc;
+      list-style-position: inside;
+      margin: 0 0 $spacing-06 0;
+      li {
+        @include carbon--type-style("body-short-01");
+      }
+    }
+  }
+
+  &__additional-text {
+    @include carbon--type-style("body-short-01");
+  }
+
+  &__inline-info {
+    display: flex;
+    margin-bottom: $spacing-03;
+    .hedi--midwife-care-request-view__label {
+      margin-bottom: 0;
+      margin-inline-end: 6px;
+    }
+    p {
+      @include carbon--type-style("body-short-01");
+    }
+  }
+
+  &__inline-loader {
+    position: absolute;
+    right: $spacing-05;
+    top: $spacing-10;
+  }
+  &__no-results {
+    height: 100%;
+    min-height: 400px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    font-size: 36px;
+  }
+
+  &__white-row {
+    background: white;
+    padding-top: $spacing-04;
+    padding-bottom: $spacing-04;
+  }
+
+  &__recipients {
+    display: flex;
+    flex-wrap: wrap;
+    padding: $spacing-04 0;
+    > * {
+      margin-inline-end: $spacing-05;
+      width: 400px;
+      height: max-content;
+    }
+    &__connection {
+      background: $gray-10;
+      border-radius: 8px;
+      padding: $spacing-04;
+      font-weight: 500;
+      &:not(:last-child) {
+        margin-bottom: $spacing-03;
+      }
+    }
+  }
+
+  &__owner-profile-headline {
+    margin-top: $spacing-05;
+  }
+
+  &__owner-profile-sub-headline {
+    margin-bottom: $spacing-05;
+  }
+
+  &__owner-profile {
+    display: flex;
+    &__image {
+      width: 220px;
+    }
+    &__text {
+      &__location {
+        color: $orange-50;
+        fill: $orange-50;
+        &--icon,
+        &--name {
+          display: inline-block;
+        }
+      }
+      &__sub-headline {
+        font-weight: 700;
+      }
+      &__column-container {
+        display: flex;
+        > :not(:first-child) {
+          margin-inline-start: $spacing-05;
+        }
+      }
+    }
+  }
+
+  &__action-buttons {
+    margin-top: $spacing-05;
+    display: flex;
+    > :not(:first-child) {
+      margin-inline-start: $spacing-05;
+    }
+  }
+}

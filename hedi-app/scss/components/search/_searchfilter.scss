@@ -1,0 +1,27 @@
+.hedi--search-filter {
+  // padding: $spacing-05 40px $spacing-09 $spacing-05;
+
+  &__headline {
+    margin-bottom: $spacing-07;
+  }
+
+  &__body {
+    margin-bottom: $spacing-06;
+  }
+  .bx--form-item {
+    margin-bottom: $spacing-05;
+  }
+
+  &__buttons {
+    display: grid;
+    grid-template-columns: 100%;
+    width: 100%;
+    button {
+      width: 100%;
+    }
+  }
+}
+
+.bx--overflow-menu-options {
+  width: auto;
+}

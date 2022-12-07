@@ -1,0 +1,44 @@
+.hedi--search-midwife-no-results {
+  &__image-container {
+    &--big {
+      margin-top: $spacing-08;
+      width: 140px;
+    }
+    &--small {
+      width: 95px;
+    }
+
+    &--right {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+
+  &__button-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: $spacing-08;
+  }
+
+  .bx--accordion__item {
+    ul,
+    ol,
+    p {
+      @include carbon--breakpoint-up("md") {
+        padding: 0 $spacing-11;
+      }
+    }
+    ol {
+      list-style: decimal;
+      list-style-position: outside;
+    }
+    ul {
+      list-style: disc;
+      list-style-position: outside;
+    }
+    li {
+      margin-bottom: $spacing-05;
+      line-height: 1.4rem;
+    }
+  }
+}

@@ -1,0 +1,29 @@
+.hedi--midwife-network-request__teaser {
+  background-color: #fff;
+  border: 2px solid $blue-20;
+  padding: $spacing-07 $spacing-07 $spacing-12;
+  position: relative;
+
+  &-subheadline {
+    color: $blue-50;
+  }
+
+  &-headline {
+    margin-bottom: $spacing-06;
+  }
+  &-image {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    max-width: 130px;
+  }
+
+  &-body {
+    @include carbon--breakpoint-up("md") {
+      max-width: 80%;
+    }
+    p {
+      @include type-style("body-long-01");
+    }
+  }
+}

@@ -1,0 +1,38 @@
+.hedi--browser-test {
+  background: white;
+  padding-top: $spacing-08;
+  padding-bottom: $spacing-10;
+
+  &__headline {
+    margin-bottom: $spacing-05;
+  }
+
+  &__success {
+    margin-top: $spacing-05;
+    display: flex;
+    align-items: center;
+    &--image {
+      position: relative;
+      width: 120px;
+      height: 120px;
+      margin-inline-end: $spacing-03;
+    }
+  }
+
+  &__back2home {
+    margin-top: $spacing-05;
+    display: flex;
+    align-items: center;
+    &__text {
+      margin-left: $spacing-03;
+    }
+  }
+
+  ul {
+    list-style: inside;
+    margin: $spacing-05 $spacing-04 $spacing-06;
+    li {
+      margin-top: $spacing-03;
+    }
+  }
+}

@@ -1,0 +1,61 @@
+.hedi--profile-capacity {
+  &__image-wrap {
+    display: flex;
+    justify-content: flex-end;
+    height: 115px;
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: $spacing-05;
+
+    &-label {
+      align-items: center;
+      color: $gray-50;
+      display: flex;
+      margin-bottom: $spacing-03;
+    }
+  }
+  &__status {
+    font-weight: 600;
+    &--active {
+      color: $green-primary;
+    }
+    &--inactive {
+      color: $pink-70;
+    }
+  }
+
+  &__item-edit {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: $spacing-05;
+    div:last-child p {
+      @include carbon--type-style("helper-text-01");
+      color: $gray-60;
+    }
+    @include carbon--breakpoint-down("md") {
+      border-top: 1px solid $gray-20;
+      flex-direction: column;
+      padding-top: $spacing-05;
+
+      div:last-child {
+        margin-bottom: $spacing-03;
+      }
+      p {
+        padding-right: unset;
+      }
+    }
+    &-value {
+      margin-bottom: $spacing-03;
+      padding-right: $spacing-07;
+      @include carbon--breakpoint-up("md") {
+        flex: 0 0 230px;
+      }
+      @include carbon--breakpoint-down("md") {
+        align-self: baseline;
+      }
+    }
+  }
+}

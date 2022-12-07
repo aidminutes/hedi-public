@@ -1,0 +1,9 @@
+.hedi--menu-tabs {
+  margin-top: $spacing-06;
+  [role="tabpanel"] {
+    display: none;
+  }
+  [role="tab"] {
+    outline: none!important;
+  }
+}

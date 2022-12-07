@@ -1,0 +1,47 @@
+.hedi--glossary-link-with-tooltip {
+  position: relative;
+  &__content {
+    display: none;
+    position: absolute;
+    top: $spacing-06;
+    left: 0;
+    z-index: 3;
+    width: 300px;
+    padding: $spacing-05 $spacing-07 $spacing-06 $spacing-06;
+    overflow: hidden;
+    border: 1px solid $gray-30;
+    background: white;
+
+    &__headline {
+      display: block;
+      margin-bottom: $spacing-04;
+      @include type-style("productive-heading-03");
+    }
+
+    &__german-term {
+      display: block;
+      margin: $spacing-04 0;
+      @include carbon--font-family("sans");
+      @include type-style("body-long-01");
+      color: $gray-60;
+      font-style: italic;
+    }
+
+    p {
+      margin: 0;
+      display: -webkit-box;
+      -webkit-line-clamp: 10;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      @include type-style("body-long-01");
+    }
+  }
+  &:hover {
+    cursor: pointer;
+    .hedi--glossary-link-with-tooltip__content {
+      @include carbon--breakpoint("md") {
+        display: block;
+      }
+    }
+  }
+}

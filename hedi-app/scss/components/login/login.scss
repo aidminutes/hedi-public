@@ -1,0 +1,75 @@
+.hedi--login-page {
+  @extend .hedi--account-page;
+}
+
+.hedi--login {
+  &__content-wrap {
+    @include carbon--breakpoint-up("md") {
+      padding-top: $spacing-10;
+    }
+  }
+
+  &__headline {
+    margin-bottom: $spacing-05;
+  }
+  &__lost-password {
+    text-align: end;
+    margin-bottom: -($spacing-05);
+    a {
+      @include type-style("body-short-01");
+    }
+  }
+  &__image {
+    max-width: 240px;
+    &-wrap {
+      width: 160px;
+      margin: $spacing-07 auto 0;
+    }
+  }
+
+  &__registration-call {
+    margin-bottom: $spacing-08;
+    p,
+    a {
+      @include type-style("body-long-01");
+    }
+  }
+
+  &__registration-link {
+    margin-top: $spacing-04;
+  }
+}
+
+.hedi--login-form {
+  .hedi--block-label {
+    display: block;
+  }
+
+  .bx--inline-notification {
+    max-width: unset;
+  }
+  .hedi--group--login {
+    form {
+      .hedi--login-buttoncontainer {
+        display: flex;
+        align-items: flex-end;
+
+        span {
+          // TODO use TOkens
+          margin-inline-start: 10px;
+          font-size: 0.9em;
+        }
+
+        @media (max-width: 769px) {
+          flex-direction: column;
+          align-items: flex-start;
+          span {
+            // TODO use TOkens
+            margin-inline-start: 0;
+            margin-block-start: 1rem;
+          }
+        }
+      }
+    }
+  }
+}

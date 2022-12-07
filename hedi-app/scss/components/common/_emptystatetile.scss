@@ -1,0 +1,32 @@
+.hedi--empty-state-tile {
+  $tileHeight: 330px;
+
+  border: 1px solid $gray-30;
+  padding: $spacing-07;
+  width: 100%;
+
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+
+  @include carbon--breakpoint-up("md") {
+    min-height: $tileHeight;
+  }
+
+  &__image-container {
+    margin-top: $spacing-09;
+    max-width: 160px;
+  }
+
+  &__text-container {
+    color: $gray-50;
+    margin-top: $spacing-06;
+    text-align: center;
+    p {
+      @include type-style("body-long-01");
+    }
+  }
+  &__interaction-area {
+    margin-top: $spacing-06;
+  }
+}

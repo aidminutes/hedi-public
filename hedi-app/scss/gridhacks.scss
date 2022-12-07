@@ -1,0 +1,15 @@
+@mixin bxGridEnableFullwidthBackgroundColorHack() {
+  overflow-x: hidden;
+}
+
+// TODO: Hack is currently non-mobile only
+@mixin bxRowFullwidthBackgroundColor($bgcolor) {
+  background-color: $bgcolor;
+
+  @media (min-width: 770px) {
+    margin-left: -200px;
+    padding-left: calc(200px - #{$spacing-05});
+    margin-right: -200px;
+    padding-right: calc(200px - #{$spacing-05});
+  }
+}

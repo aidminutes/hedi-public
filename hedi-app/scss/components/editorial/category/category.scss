@@ -1,0 +1,15 @@
+@import "./categoryentry";
+@import "./maincategory";
+.hedi--outside-headline {
+  @media screen and (min-width: 672px) {
+    margin-bottom: -3%;
+    transform: translateY(-99%);
+  }
+  .hedi--titlegroup {
+    background-color: #fff;
+    padding: 1rem;
+    @media (min-width: 672px) {
+      padding: 1rem 2rem 0 2rem;
+    }
+  }
+}

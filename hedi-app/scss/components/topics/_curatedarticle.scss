@@ -1,0 +1,64 @@
+.hedi--curated-article {
+  background: white;
+  padding: $spacing-05;
+  margin-bottom: $spacing-05;
+
+  &__tile {
+    padding: 0;
+    &:hover .hedi--curated-article {
+      filter: brightness(1.1);
+    }
+  }
+
+  &__img-container {
+    margin-bottom: $spacing-05;
+    max-width: $spacing-12;
+    @include carbon--breakpoint("md") {
+      max-width: none;
+    }
+  }
+
+  // the following solution allows a fixed height but does not scale very well (literally) when resizing the browser
+  //&__text-container {
+  //  &::after {
+  //    content: "…"
+  //  }
+  //}
+  //&__text {
+  //  max-height: 150px;
+  //  display: inline-flex;
+  //  flex-direction: column;
+  //}
+  &__text {
+    p {
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      @include carbon--breakpoint-down("md") {
+        @include type-style("body-long-01");
+      }
+    }
+  }
+
+  &__breadcrumb {
+    margin-bottom: $spacing-05;
+  }
+
+  &__title {
+    margin-bottom: $spacing-05;
+    .bx--link {
+      @include carbon--breakpoint("md") {
+        @include type-style("productive-heading-04");
+      }
+      text-decoration: none;
+      color: $gray-100;
+      @include carbon--breakpoint-down("md") {
+        font-weight: 500;
+      }
+    }
+  }
+
+  &__summary {
+    overflow: hidden;
+  }
+}

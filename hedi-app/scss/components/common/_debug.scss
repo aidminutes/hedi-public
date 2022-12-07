@@ -1,0 +1,67 @@
+.hedi--debug--info {
+  border-collapse: collapse;
+  border: 1px solid #000;
+  display: grid;
+  max-width: 100%;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 1rem;
+
+  li {
+    display: grid;
+    grid-template-columns: 220px 160px;
+    margin-bottom: 0.5rem;
+    border: 1px solid;
+    padding: 0.5rem;
+  }
+}
+
+.hedi--debug-table {
+  background: #fff;
+  font-size: 20px;
+  line-height: 1.4em;
+  margin: 5rem 0;
+  width: 100%;
+  th,
+  td {
+    border: 1px black solid;
+    padding: 10px;
+  }
+  &__sub-headings {
+    th {
+      text-align: left;
+    }
+  }
+
+  tbody td.hedi--debug-info__score {
+    text-align: center;
+
+    .leader {
+      &::after {
+        content: "\2191";
+        color: green;
+      }
+    }
+    .worst {
+      &::after {
+        content: "\2193";
+        color: red;
+      }
+    }
+  }
+
+  &--care-types {
+    background-color: $blue-10;
+  }
+  &--availability {
+    background-color: $green-10;
+  }
+  &--languages {
+    background-color: $purple-10;
+  }
+  &--services {
+    background-color: $orange-10;
+  }
+  &--distance {
+    background-color: $pink-10;
+  }
+}

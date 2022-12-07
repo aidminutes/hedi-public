@@ -1,0 +1,51 @@
+.hedi--article-search-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: $spacing-10 $spacing-07 $spacing-11;
+
+  @include carbon--breakpoint("md") {
+    padding: $spacing-10 0 $spacing-11;
+  }
+
+  &__headline {
+    margin-bottom: $spacing-07;
+    max-width: 470px;
+    text-align: center;
+  }
+  &__search {
+    display: flex;
+    width: 100%;
+
+    &__button {
+      @include carbon--breakpoint-down("md") {
+        display: none !important;
+      }
+      &--mobile {
+        @include carbon--breakpoint("md") {
+          display: none !important;
+        }
+      }
+    }
+
+    .bx--search-input {
+      border: 1px solid $blue-primary;
+      @include carbon--breakpoint-down("md") {
+        padding: 0 $spacing-05;
+        @include rtl-only(){
+          padding-right: $spacing-09;
+        }
+      }
+    }
+
+    .bx--search-magnifier {
+      @include carbon--breakpoint-down("md") {
+        display: none;
+      }
+    }
+  }
+  &__image {
+    width: 187px;
+    margin-top: $spacing-09;
+  }
+}

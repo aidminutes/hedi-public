@@ -1,0 +1,25 @@
+.hedi--userfeedback-page {
+  // Überschreibt das default Padding vom
+  // CMS bottom
+  p {
+    margin-bottom: $spacing-03 !important;
+  }
+
+  .hedi-seperator {
+    margin-bottom: $spacing-07;
+  }
+
+  .hedi--feedback-submit {
+    margin-top: $spacing-05;
+  }
+}
+
+.hedi--userfeedback-item {
+  height: calc(100% - 2rem);
+  display: flex;
+  flex-direction: column;
+
+  .bx--text-area__wrapper {
+    height: 100%;
+  }
+}

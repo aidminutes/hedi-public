@@ -1,0 +1,23 @@
+$rtl-languages: "fa";
+$ltr-languages: "de", "en", "fr", "uk";
+
+$button-padding-rtl: calc(0.875rem - 3px) 15px calc(0.875rem - 3px) 63px !default;
+
+@mixin ltr-only() {
+  @each $language in $ltr-languages {
+    @at-root {
+      html:lang(#{$language}) #{&} {
+        @content;
+      }
+    }
+  }
+}
+@mixin rtl-only() {
+  @each $language in $rtl-languages {
+    @at-root {
+      html:lang(#{$language}) #{&} {
+        @content;
+      }
+    }
+  }
+}

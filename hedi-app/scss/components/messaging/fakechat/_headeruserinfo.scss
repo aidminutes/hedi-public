@@ -1,0 +1,15 @@
+.hedi--header-user-info {
+  align-items: center;
+  display: flex;
+  flex-grow: 3;
+  padding: 0 .5rem;
+
+  &__name{
+    color:#fff;
+    margin-left: 1rem;
+    @include rtl-only {
+      margin-right: 1rem;
+      margin-left: 0;
+    }
+  }
+}

@@ -1,0 +1,31 @@
+.hedi--profile-edit-modal {
+  .bx--form-item {
+    margin-bottom: $spacing-05;
+    @include carbon--breakpoint-down("md") {
+      margin-bottom: $spacing-03;
+    }
+  }
+  &__intro-text {
+    margin-bottom: $spacing-09;
+    @include carbon--breakpoint-down("md") {
+      margin-bottom: $spacing-05;
+    }
+  }
+  &__title {
+    margin-bottom: $spacing-05;
+    @include carbon--breakpoint-down("md") {
+      margin-bottom: $spacing-03;
+    }
+  }
+
+  &__explanation {
+    margin-bottom: $spacing-09;
+    @include carbon--breakpoint-down("md") {
+      margin-bottom: $spacing-05;
+    }
+    p {
+      @include carbon--type-style("helper-text-01");
+      color: $gray-60;
+    }
+  }
+}

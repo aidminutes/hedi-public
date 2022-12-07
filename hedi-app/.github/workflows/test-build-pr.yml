@@ -1,0 +1,36 @@
+name: "Test-Build-PR"
+on: workflow_dispatch
+jobs:
+  all_in_one:
+    name: "next build"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        #with:
+        #  ref: ${{ github.event.pull_request.head.sha }}
+      - uses: actions/setup-node@v1
+        with:
+          node-version: "14.x"
+      - name: Get yarn cache dir
+        id: yarn-cache-dir
+        run: echo "::set-output name=dir::$(yarn cache dir)"
+      - name: cache yarn node_modules & next/cache
+        id: cache-all
+        uses: actions/cache@v2
+        env: 
+          cache-name: cache-yarn-n_m-next
+        with:
+          path: |
+            ${{ steps.yarn-cache-dir.outputs.dir }}
+            node_modules
+            ${{ github.workspace }}/.next/cache
+          key: ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-${{ env.cache-name }}-
+            ${{ runner.os }}-
+      - name: Install dependencies
+        if: steps.cache-all.outputs.cache-hit != 'true' 
+        run: yarn install --frozen-lockfile --prefer-offline
+      - name: Build Project
+        run: yarn build
+        if: always()

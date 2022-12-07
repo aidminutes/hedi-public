@@ -1,0 +1,162 @@
+//
+// This file is exported from
+// https://projekt-hedi.de/paletti/?007362=Green&C94E1B=Orange&574E90=Purple&2A84C6=Blue&E35C8D=Pink&A35844=Brown
+//
+// Structure:
+// $[color-name]-map: ( [n*10]: #hex, ...)
+// ...
+// $[color-name]-primary: map value reference
+// $[color-name]-[n*10]: map value reference
+// ...
+//
+
+$green-map: (
+  5: #ecfafa,
+  10: #d9f6f6,
+  20: #b5dfdd,
+  30: #91c8c4,
+  40: #6db2aa,
+  50: #489c90,
+  60: #1c8879,
+  70: #007362,
+  80: #005f4c,
+  90: #004b37,
+  100: #003824,
+);
+$orange-map: (
+  5: #fef6ef,
+  10: #ffeddf,
+  20: #f7ceb2,
+  30: #edaf88,
+  40: #e18f60,
+  50: #d36e3c,
+  60: #c94e1b,
+  70: #aa3e1d,
+  80: #8b301c,
+  90: #6c2418,
+  100: #4e1913,
+);
+$purple-map: (
+  5: #fdf5fd,
+  10: #fbecfc,
+  20: #ead0ef,
+  30: #d6b6e3,
+  40: #c09cd8,
+  50: #a784ce,
+  60: #8e6ec6,
+  70: #715eab,
+  80: #574e90,
+  90: #3f3e75,
+  100: #292e5b,
+);
+$blue-map: (
+  5: #f5f7ff,
+  10: #ecf0ff,
+  20: #ced8f7,
+  30: #aec1ea,
+  40: #8bacde,
+  50: #6397d1,
+  60: #2a84c6,
+  70: #0070ab,
+  80: #005d90,
+  90: #004b76,
+  100: #00395d,
+);
+$pink-map: (
+  5: #fff4f6,
+  10: #ffeaec,
+  20: #ffc8d0,
+  30: #f9a5b7,
+  40: #ef82a0,
+  50: #e35c8d,
+  60: #db2f73,
+  70: #b7295b,
+  80: #942345,
+  90: #731d32,
+  100: #521621,
+);
+$brown-map: (
+  5: #fff9fa,
+  10: #ffede0,
+  20: #f4d3c0,
+  30: #e6b9a1,
+  40: #d89f84,
+  50: #ca8569,
+  60: #bc6b51,
+  70: #a35844,
+  80: #8b4537,
+  90: #72332b,
+  100: #5b221f,
+);
+$green-primary: map-get($green-map, 70);
+$green-5: map-get($green-map,5);
+$green-10: map-get($green-map, 10);
+$green-20: map-get($green-map, 20);
+$green-30: map-get($green-map, 30);
+$green-40: map-get($green-map, 40);
+$green-50: map-get($green-map, 50);
+$green-60: map-get($green-map, 60);
+$green-70: map-get($green-map, 70);
+$green-80: map-get($green-map, 80);
+$green-90: map-get($green-map, 90);
+$green-100: map-get($green-map, 100);
+$orange-primary: map-get($orange-map, 60);
+$orange-5: map-get($orange-map,5);
+$orange-10: map-get($orange-map, 10);
+$orange-20: map-get($orange-map, 20);
+$orange-30: map-get($orange-map, 30);
+$orange-40: map-get($orange-map, 40);
+$orange-50: map-get($orange-map, 50);
+$orange-60: map-get($orange-map, 60);
+$orange-70: map-get($orange-map, 70);
+$orange-80: map-get($orange-map, 80);
+$orange-90: map-get($orange-map, 90);
+$orange-100: map-get($orange-map, 100);
+$purple-primary: map-get($purple-map, 80);
+$purple-5: map-get($purple-map,5);
+$purple-10: map-get($purple-map, 10);
+$purple-20: map-get($purple-map, 20);
+$purple-30: map-get($purple-map, 30);
+$purple-40: map-get($purple-map, 40);
+$purple-50: map-get($purple-map, 50);
+$purple-60: map-get($purple-map, 60);
+$purple-70: map-get($purple-map, 70);
+$purple-80: map-get($purple-map, 80);
+$purple-90: map-get($purple-map, 90);
+$purple-100: map-get($purple-map, 100);
+$blue-primary: map-get($blue-map, 60);
+$blue-5: map-get($blue-map,5);
+$blue-10: map-get($blue-map, 10);
+$blue-20: map-get($blue-map, 20);
+$blue-30: map-get($blue-map, 30);
+$blue-40: map-get($blue-map, 40);
+$blue-50: map-get($blue-map, 50);
+$blue-60: map-get($blue-map, 60);
+$blue-70: map-get($blue-map, 70);
+$blue-80: map-get($blue-map, 80);
+$blue-90: map-get($blue-map, 90);
+$blue-100: map-get($blue-map, 100);
+$pink-primary: map-get($pink-map, 50);
+$pink-5: map-get($pink-map,5);
+$pink-10: map-get($pink-map, 10);
+$pink-20: map-get($pink-map, 20);
+$pink-30: map-get($pink-map, 30);
+$pink-40: map-get($pink-map, 40);
+$pink-50: map-get($pink-map, 50);
+$pink-60: map-get($pink-map, 60);
+$pink-70: map-get($pink-map, 70);
+$pink-80: map-get($pink-map, 80);
+$pink-90: map-get($pink-map, 90);
+$pink-100: map-get($pink-map, 100);
+$brown-primary: map-get($brown-map, 70);
+$brown-5: map-get($brown-map,5);
+$brown-10: map-get($brown-map, 10);
+$brown-20: map-get($brown-map, 20);
+$brown-30: map-get($brown-map, 30);
+$brown-40: map-get($brown-map, 40);
+$brown-50: map-get($brown-map, 50);
+$brown-60: map-get($brown-map, 60);
+$brown-70: map-get($brown-map, 70);
+$brown-80: map-get($brown-map, 80);
+$brown-90: map-get($brown-map, 90);
+$brown-100: map-get($brown-map, 100);

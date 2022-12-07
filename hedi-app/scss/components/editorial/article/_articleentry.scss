@@ -1,0 +1,9 @@
+.hedi--article-entry-list {
+  &:not(:last-of-type) {
+    margin-bottom: $spacing-09;
+  }
+
+  &__headline {
+    margin-bottom: $spacing-07;
+  }
+}

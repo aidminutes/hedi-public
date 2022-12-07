@@ -1,0 +1,41 @@
+name: "Test-Compile-PR"
+on:
+  pull_request:
+    types:
+      - opened
+      - synchronize
+      - reopened
+jobs:
+  all_in_one:
+    name: "next compile typescript"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        #with:
+        #  ref: ${{ github.event.pull_request.head.sha }}
+      - uses: actions/setup-node@v1
+        with:
+          node-version: "14.x"
+      - name: Get yarn cache dir
+        id: yarn-cache-dir
+        run: echo "::set-output name=dir::$(yarn cache dir)"
+      - name: cache yarn node_modules & next/cache
+        id: cache-all
+        uses: actions/cache@v2
+        env: 
+          cache-name: cache-yarn-n_m-next
+        with:
+          path: |
+            ${{ steps.yarn-cache-dir.outputs.dir }}
+            node_modules
+            ${{ github.workspace }}/.next/cache
+          key: ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-${{ env.cache-name }}-
+            ${{ runner.os }}-
+      - name: Install dependencies
+        if: steps.cache-all.outputs.cache-hit != 'true' 
+        run: yarn install --frozen-lockfile --prefer-offline
+      - name: Compile Project
+        run: yarn compileTS
+        if: always()

@@ -1,0 +1,118 @@
+//
+// generates helper classes for margin, padding and border-radius
+// tailwind like, but with units derived from the system
+// e.g. '.mb-l-xl' = margin-bottom: $spacing-12;
+//
+
+@mixin utilities {
+  $units: (
+    s: (
+      4xs: $spacing-4xs,
+      3xs: $spacing-01,
+      2xs: $spacing-02,
+      xs: $spacing-03,
+      sm: $spacing-04,
+      md: $spacing-05,
+      lg: $spacing-06,
+      xl: $spacing-07,
+      2xl: $spacing-08,
+      3xl: $spacing-09,
+    ),
+    l: (
+      2xs: $spacing-05,
+      xs: $spacing-06,
+      sm: $spacing-07,
+      md: $spacing-09,
+      lg: $spacing-10,
+      xl: $spacing-12,
+      2xl: $spacing-13,
+    )
+  );
+  
+  @include _gen-spacers($units);
+  @include _gen-border-radius(map-get($units,s));
+}
+
+@mixin _gen-border-radius($pairs) {
+  @each $key, $value in $pairs {
+    .b-rad-#{$key}, 
+    .b-rad-#{$key}::before, 
+    .b-rad-#{$key}::after {
+      border-radius: $value;
+    }
+  }
+}
+
+@mixin _gen-spacers($units) {
+  $pairs: ('auto': auto);
+  @each $type, $map in $units {
+    @each $unit, $v in $map {
+      $pairs: map-merge($pairs, (#{$type}-#{$unit}: $v));
+    }
+  }
+
+  @each $key, $value in $pairs {
+    .h-#{$key} {
+      height: $value;
+    }
+
+    .m-#{$key} {
+      margin: $value;
+    }
+    .mx-#{$key} {
+      margin-right: $value;
+      margin-left: $value;
+    }
+    .my-#{$key} {
+      margin-top: $value;
+      margin-bottom: $value;
+    }
+    .mt-#{$key} {
+      margin-top: $value;
+    }
+    .mr-#{$key} {
+      margin-right: $value;
+    }
+    .mb-#{$key} {
+      margin-bottom: $value;
+    }
+    .ml-#{$key} {
+      margin-left: $value;
+    }
+
+    .p-#{$key} {
+      padding: $value;
+    }
+    .px-#{$key} {
+      padding-right: $value;
+      padding-left: $value;
+    }
+    .py-#{$key} {
+      padding-top: $value;
+      padding-bottom: $value;
+    }
+    .pt-#{$key} {
+      padding-top: $value;
+    }
+    .pr-#{$key} {
+      padding-right: $value;
+    }
+    .pb-#{$key} {
+      padding-bottom: $value;
+    }
+    .pl-#{$key} {
+      padding-left: $value;
+    }
+  }
+}
+
+@mixin hideInPrint(){
+  @media print {
+    display: none;
+  }
+}
+@mixin printExcluded(){
+  @media not print {
+    @content;
+  }
+}

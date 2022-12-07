@@ -1,0 +1,65 @@
+.hedi--bg-img-container {
+  padding: $spacing-07 0;
+  margin-bottom: $spacing-07;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    filter: opacity(0.75);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .bx--row--narrow {
+    justify-content: flex-end;
+  }
+
+  .hedi--profile-entry {
+    background-color: #fff;
+    position: relative;
+    > .bx--btn--ghost {
+      position: relative;
+      // TODO anders positionieren
+      transform: translateX(90%);
+      @media (min-width: 769px) {
+        position: absolute;
+        bottom: 0;
+        transform: translateX(0);
+      }
+    }
+    @include ltr-only() {
+      > .bx--btn--ghost {
+        @media (min-width: 769px) {
+          right: 0;
+        }
+      }
+    }
+    @include rtl-only() {
+      > .bx--btn--ghost {
+        @media (min-width: 769px) {
+          left: 0;
+        }
+      }
+    }
+    &-image {
+      @media (max-width: 769px) {
+        svg {
+          max-height: 200px;
+        }
+      }
+    }
+  }
+
+  > div {
+    position: relative;
+    width: 100%;
+  }
+
+  @media (max-width: 769px) {
+    padding: $spacing-05;
+  }
+}

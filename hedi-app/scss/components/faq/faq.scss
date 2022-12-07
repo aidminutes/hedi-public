@@ -1,0 +1,17 @@
+.hedi--faq {
+  &__wrap {
+    background-color: $blue-5;
+    padding: $spacing-07 0;
+  }
+
+  &__image-column {
+    padding: $spacing-07 0;
+    > div > div {
+      max-height: 30vh;
+    }
+
+    &--wrap {
+      background-color: #fff;
+    }
+  }
+}

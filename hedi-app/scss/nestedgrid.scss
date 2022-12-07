@@ -1,0 +1,26 @@
+.hedi--grid__no-padding {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.hedi--grid__no-padding--desktop {
+  @media (min-width: 672px) {
+    padding-left: 0;
+    padding-right: 0;
+
+    .bx--row {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+}
+
+// the column, which contains the nested grid
+.hedi--col--grid-nest {
+  @extend .hedi--grid__no-padding;
+
+  .bx--grid {
+    padding-left: $spacing-05;
+    padding-right: $spacing-05;
+  }
+}

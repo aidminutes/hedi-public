@@ -1,0 +1,94 @@
+.hedi--SearchMidwifeConfirmation-page {
+  background-color: #fff;
+}
+
+.hedi--search-midwife-confirmation {
+
+  h2 {
+    @include carbon--font-family("sans");
+  }
+  &__section {
+    margin-bottom: $spacing-10;
+  }
+
+  &__intro-text {
+    color: $gray-50;
+  }
+
+  &__toggle {
+    display: flex;
+
+    .bx--toggle__switch span {
+      max-width: 72vw;
+      overflow: hidden;
+    }
+  }
+
+  &__for{
+    margin-bottom: $spacing-03;
+  }
+
+  &__short {
+    @include type-style("body-short-01");
+  }
+
+  &__midwife-entry {
+    display: grid;
+    grid-template-columns: 15% 80% 5%;
+    align-items: center;
+    border-top: 1px solid $gray-20;
+    padding: $spacing-02;
+
+    &:last-child {
+      border-bottom: 1px solid $gray-20;
+    }
+
+    a {
+      text-decoration: none;
+      @include type-style("productive-heading-02");
+    }
+
+    svg {
+      width: 40px;
+    }
+  }
+
+  &__additional-info {
+    color: $gray-50;
+    display: flex;
+    .bx--label {
+      color: $gray-50;
+    }
+    svg {
+      margin-inline-end: $spacing-02;
+    }
+  }
+
+  &__freetext-description {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: $spacing-05;
+  }
+
+  &__button-container {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: $spacing-07;
+    @include carbon--breakpoint-down("md") {
+      margin-bottom: $spacing-12;
+    }
+
+    button {
+      min-width: 45%;
+      @include carbon--breakpoint-down("md") {
+        min-width: 49%;
+      }
+    }
+  }
+
+  &__duplicate-recipient-list {
+    margin-bottom: $spacing-05;
+    list-style: disc;
+    line-height: $spacing-06;
+  }
+}

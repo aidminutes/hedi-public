@@ -1,0 +1,48 @@
+.hedi--field-visibility {
+  position: relative;
+
+  &__item {
+    .bx--overflow-menu-options__btn {
+      padding:0;
+    }
+
+    .bx--overflow-menu-options__option-content {
+      white-space: normal;
+    }
+
+    button::before {
+      content: "";
+      min-width: 2.5rem;
+      width: 2.5rem;
+      height: 2.5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 16px;
+    }
+    &.selected {
+      border-left: 4px solid green;
+      background-color: honeydew;
+      :hover {
+        cursor: auto;
+      }
+    }
+  }
+  &__item.public button::before {
+    // background-image: url(/svg/earth--filled.svg);
+    background-image: url(/svg/events.svg);
+  }
+  &__item.registered-user button::before {
+    // background-image: url(/svg/connect.svg);
+    background-image: url(/svg/user--admin.svg);
+  }
+  &__item.connected-user button::before {
+    background-image: url(/svg/collaborate.svg);
+  }
+
+  &--personal-context{
+    @extend .only-for-screenreaders;
+  }
+}

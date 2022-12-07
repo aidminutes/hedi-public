@@ -1,0 +1,142 @@
+.hedi--msg-message-composer {
+  direction: ltr;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: $spacing-02 $spacing-02;
+  background-color: #e0eaf1;
+  border-top: 1px solid #d3d3d3;
+  width: 100%;
+  margin: 0 !important;
+  position: relative;
+
+  svg {
+    transform: none !important;
+  }
+
+  textarea {
+    .bx--text-input:focus {
+      outline: none;
+      border: none;
+    }
+  }
+
+  &--input-multi-line {
+    resize: none;
+    width: 100%;
+    word-wrap: break-word;
+    border-radius: $spacing-06;
+    border-width: 0;
+    height: 20px;
+    background-color: #fff;
+
+    .bx--text-input:focus {
+      outline: none;
+      border: none;
+    }
+
+    -ms-overflow-style: none; /* for Internet Explorer, Edge */
+    scrollbar-width: none; /* for Firefox */
+
+    &::-webkit-scrollbar {
+      display: none; /* for Chrome, Safari, and Opera */
+    }
+  }
+
+  .sendButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    border-radius: 100%;
+    background-color: #2a84c6;
+    color: #fff;
+    max-height: 41px;
+    cursor: pointer;
+    transition: filter 0.2s ease-in-out;
+    border: none;
+
+    &:hover {
+      filter: brightness(70%);
+    }
+
+    svg {
+      margin: 0;
+    }
+  }
+
+  .shareButton, .quickSearch {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    color: #2a84c6;
+    max-height: 41px;
+    cursor: pointer;
+    transition: filter 0.2s ease-in-out;
+
+    &:hover {
+      filter: brightness(70%);
+    }
+
+    svg {
+      margin: 0;
+    }
+  }
+
+  .hedi--msg-message-composer--quick-search {
+
+  }
+
+  .hedi--msg-message-composer--share {
+
+  }
+
+  svg {
+    margin: 0 $spacing-01;
+    min-width: 15%;
+    @include rtl-only() {
+      transform: rotate(180deg);
+    }
+  }
+
+  .hediRoutePreviewWrapper {
+    width: 100%;
+    word-wrap: break-word;
+    border-width: 0;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+
+    .hediRoutePreview {
+      cursor: pointer;
+      display: flex;
+      align-items: flex-start;
+      padding: 0.5rem;
+      margin: 0 0.25rem;
+      background-color: #fff;
+      border-radius: 1rem;
+      overflow: hidden;
+
+      .previewWrapper {
+        padding: 0.25rem 0.5rem;
+
+        .entryHeadline {
+          @include carbon--type-style("body-short-01");
+        }
+
+        .label {
+          font-size: 1.25rem;
+          margin: 0.5rem 0 0 0;
+        }
+      }
+
+      .deleteRoute {
+        margin-left: 0.5rem;
+        height: 1.25rem;
+        width: 1.25rem;
+        color: #2a84c6;
+      }
+    }
+  }
+}

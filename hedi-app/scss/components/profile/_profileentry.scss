@@ -1,0 +1,175 @@
+.hedi--profile-list {
+  background-color: $ui-01;
+}
+
+.hedi--profile-entry {
+  background-color: #fff;
+  direction: ltr;
+  margin-bottom: $spacing-04;
+
+  @media print {
+    margin-bottom: $spacing-07;
+  }
+
+  &__content {
+    overflow: hidden;
+    &--wrap {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      justify-content: space-between;
+      @media screen {
+        padding: $spacing-05;
+      }
+    }
+
+    h3 {
+      @include carbon--type-style("productive-heading-04");
+    }
+
+    &.bx--grid {
+      height: 100%;
+      .bx--row {
+        height: 100%;
+      }
+    }
+  }
+
+  &--distance-label {
+    align-items: center;
+    color: $orange-primary;
+    display: flex;
+    svg {
+      margin-right: $spacing-04;
+      @include rtl-only {
+        margin-right: 0;
+        margin-left: $spacing-04;
+      }
+    }
+  }
+  &__matching {
+    margin-bottom: $spacing-05;
+    &--headline {
+      font-weight: 600;
+      margin-bottom: $spacing-03;
+    }
+    &--care-types {
+      li {
+        &::before {
+          content: "\2713";
+          color: $orange-primary;
+          margin-right: $spacing-03;
+          @include rtl-only {
+            margin-right: 0;
+            margin-left: $spacing-03;
+          }
+        }
+      }
+    }
+  }
+
+  &__image {
+    align-items: flex-start;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    margin-top: 0.25rem;
+    max-width: 200px;
+    padding: $spacing-03;
+    width: 100%;
+
+    &--wrap {
+      padding: 1rem 0;
+    }
+  }
+
+  &__info {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-top: $spacing-05;
+    @media screen and (min-width: 672px) {
+      grid-template-columns: 20% 75%;
+      grid-column-gap: 5%;
+      margin-top: $spacing-07;
+    }
+    @media (max-width: 671px) {
+      grid-row-gap: $spacing-05;
+    }
+  }
+
+  img {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    background-color: $ui-02;
+  }
+
+  .hedi--spacing {
+    padding-top: $spacing-08;
+  }
+
+  &__contact {
+    overflow: hidden;
+    > div {
+      display: flex;
+      align-items: center;
+      > a {
+        margin: 0 $spacing-03 0 0;
+      }
+    }
+    svg {
+      margin-inline-end: $spacing-03;
+    }
+  }
+
+  &--actions {
+    justify-self: flex-end;
+    align-self: flex-end;
+    text-align: end;
+
+    @include hideInPrint();
+  }
+
+  //setzt das Launch Icon 2px runter
+  // TODO warum ist das an zwei stellen definiert% -
+  &--with-services {
+    background-color: white;
+
+    .hedi--tag-list {
+      padding-top: $spacing-04;
+    }
+  }
+}
+
+.hedi--profile-type {
+  &--professional {
+    $profile-type-color: $pink-60;
+    .hedi--profile-entry__image svg .cls-1 {
+      fill: $profile-type-color;
+    }
+    .hedi--profile-entry--profession-label {
+      color: $profile-type-color;
+    }
+
+    &.hedi--profile-entry--midwife-result {
+      .hedi--profile-entry__image svg {
+        border: 1px solid $gray-40;
+        .cls-1 {
+          fill: $orange-primary;
+        }
+      }
+      &--selected {
+        background-color: $blue-10;
+      }
+    }
+  }
+  &--organisation {
+    $profile-type-color: $green-60;
+    .hedi--profile-entry__image svg .cls-1 {
+      fill: $profile-type-color;
+    }
+    .hedi--profile-entry--profession-label {
+      color: $profile-type-color;
+    }
+  }
+}

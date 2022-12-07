@@ -1,0 +1,17 @@
+// Let this file in the main folder, because could not assign it to a component
+
+.hedi--group {
+  form {
+    margin-block-end: $spacing-04;
+    // .bx--text-input-wrapper {
+      // margin-block-end: $spacing-05;
+    // }
+  }
+
+  &--contact {
+    textarea {
+      min-height: $spacing-10*2;
+      
+    }
+  }
+}

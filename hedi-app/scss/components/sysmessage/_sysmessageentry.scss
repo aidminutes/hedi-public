@@ -1,0 +1,26 @@
+.hedi--sys-message-entry {
+  &:not(:first-child) {
+    margin-block-start: $spacing-02;
+  }
+  &__content--wrap {
+    background: white;
+    border-radius: 8px;
+    padding: $spacing-05;
+    animation-name: sysMessageAppear;
+    animation-duration: 0.4s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease;
+  }
+}
+
+@keyframes sysMessageAppear {
+  0% {
+    transform: scale(0);
+  }
+  80% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
