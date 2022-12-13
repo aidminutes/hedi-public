@@ -1,6 +1,6 @@
 # HEDI Search Module
 
-we use [SOLR](https://solr.apache.org/) as main search engine, and used modules in Drupal side in [HEDI-CMS project](https://github.com/aidminutes/hedi-cms) to index documents in SOLR and in current project (HEDI-APP) we request SOLR (url is stored as SOLR_URL variable in [.env.local](./../../.env.local) file) to find matching documents (entities)
+we use [SOLR](https://solr.apache.org/) as main search engine, and used modules in Drupal side in HEDI-CMS project to index documents in SOLR and in current project (HEDI-APP) we request SOLR (url is stored as SOLR_URL variable in [.env.local](./../../.env.local) file) to find matching documents (entities)
 
 ## field names in SOLR
 
@@ -9,7 +9,7 @@ field names in SOLR have a prefix to define:
 - type of the values of the field (samples: `it` for _integer_, `s` for _string_)
 - multi value of single value field (`s` for _single-valued_ and `m` for _multi-valued_)
 
-this prefixes are defined in [schema.xml](https://github.com/aidminutes/hedi-cms/blob/main/config/solr/config/schema.xml#L171-L234) in HEDI-CMS project. 
+this prefixes are defined in schema.xml in HEDI-CMS project. 
 
 for example if a field name in solr is `is_content__nid`, this field contains a single integer value. 
 
