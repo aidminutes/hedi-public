@@ -1,4 +1,7 @@
-# intersectRatio
+# General
+
+we use [SOLR](https://solr.apache.org/) as main search engine, and used modules in Drupal side in HEDI-CMS project to index documents in SOLR and in current project (HEDI-APP) we request SOLR (url is stored as SOLR_URL variable in `.env.local` file to find matching documents (entities).
+## intersectRatio
 This is a number between 0.0 and 1.0 to show how a daterange is with other daterange values intersected. 1.0 means total intersect. 0.0 means no intersect. 0.33 means 33% of intersection.
 
 ## dev machine setup
@@ -55,6 +58,8 @@ b.
 6. from [solr core admin](http://search.hedi.localhost/solr/#/~cores/search) **Reload** the solr
 
 ## usage
+
+For more detailed documentation on solr funcionalities, also see [SOLR-README](./SOLR-README.md).
 
 ### intersectRatio
 
