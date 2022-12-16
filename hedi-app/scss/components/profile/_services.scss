@@ -1,0 +1,47 @@
+.hedi--profile__services {
+  &--list {
+    line-height: 2em;
+
+    &__parent {
+      color: $gray-60;
+      margin-bottom: $spacing-03;
+    }
+  }
+
+  &--sublist {
+    margin-bottom: $spacing-07;
+    margin-inline-start: $spacing-06;
+    li {
+      list-style: disc;
+    }
+  }
+
+  &__image-wrap {
+    display: flex;
+    justify-content: flex-end;
+    height: 115px;
+  }
+
+  &__language-skills {
+    tbody {
+      width: 100%;
+      tr td.with-spacing {
+        padding-bottom: $spacing-05;
+      }
+    }
+    svg {
+      color: $blue-primary;
+      &:not(:last-child) {
+        margin-inline-end: $spacing-03;
+      }
+
+      &.inactive {
+        color: $blue-20;
+      }
+    }
+  }
+
+  &__care-types-info {
+    margin-bottom: $spacing-06;
+  }
+}

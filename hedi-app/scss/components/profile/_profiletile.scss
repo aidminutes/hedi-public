@@ -1,0 +1,33 @@
+.hedi--profile--tile {
+  .bx--tile {
+    width: 100%;
+    margin-bottom: $spacing-05;
+  }
+
+  img,
+  svg {
+    max-width: 130px;
+    max-height: 140px;
+    height: auto;
+    margin: -3px 5px;
+  }
+
+  // h3,
+  // h4,
+  // h5 {
+    // padding-bottom: $spacing-0x4;
+  // }
+  // @media (max-width: 769px) {
+  //   img {
+  //     position: absolute;
+  //     right: 0;
+  //     z-index: 1;
+  //     top: 50%;
+  //     transform: translateY(-50%);
+  //   }
+  //   aside {
+  //     position: relative;
+  //     z-index: 2;
+  //   }
+  // }
+}

@@ -1,0 +1,26 @@
+@import "./config/config.scss";
+@import "./theme/hedi-theme.scss";
+@include hedi-theme;
+
+// @import "carbon-components/scss/globals/scss/styles";
+@import "./carbon-custom-include.scss";
+
+@import "./utilities.scss";
+@import "./languages.scss";
+// FROM GENERAL TO SPECIFIC
+// *************************
+// BASE -> all genreal html tags concerning
+@import "./base.scss";
+@import "./nestedgrid.scss";
+// page -> all things concerning the whole page (for example hedi category colors)
+@import "./page/page.scss";
+// grid hack mixins
+@import "./gridhacks.scss";
+// components -> all components concerning
+@import "./components/components.scss";
+// overwrite carbon classes
+@import "./carbon-overwrite.scss";
+// helper -> helper classes like ".hidden"
+@import "./helper.scss";
+@import "./print";
+

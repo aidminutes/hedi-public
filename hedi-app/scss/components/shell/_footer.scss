@@ -1,0 +1,69 @@
+.hedi--footer {
+  align-items: center;
+  background-color: transparent;
+  display: flex;
+  height: $spacing-09;
+  justify-content: space-between;
+  padding: 0 $spacing-07;
+  position: relative;
+  z-index: 3;
+  @include carbon--breakpoint-down("md"){
+    justify-content: flex-end;
+  }
+
+
+  &__social-icons {
+    a:not(:last-child) {
+      margin-inline-end: $spacing-07;
+    }
+  }
+  &__nav {
+    @extend .bx--header__nav;
+    @include carbon--breakpoint-up("md") {
+      display: block;
+    }
+
+    &::before {
+      display: none;
+    }
+  }
+  &__menu-bar {
+    @extend .bx--header__menu-bar;
+  }
+  &__menu-item {
+    @extend .bx--header__menu-item;
+    color: $ui-02 !important;
+    text-decoration: none !important;
+    &:hover {
+      color: $ui-02;
+    }
+  }
+
+  li {
+    display: flex;
+    align-items: center;
+    span {
+      @extend .bx--link;
+      @extend .hedi--footer__menu-item;
+    }
+
+    .hedi--footer__menu-item--version-number {
+      font-size: 0.875rem;
+      @include carbon--breakpoint-up("md") {
+        margin-inline-start: $spacing-07;
+      }
+    }
+  }
+
+  span {
+    @extend .bx--text-truncate--end;
+  }
+
+  svg {
+    fill: $ui-02;
+  }
+
+  @media print {
+    display: none;
+  }
+}

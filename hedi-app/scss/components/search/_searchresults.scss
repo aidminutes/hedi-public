@@ -1,0 +1,71 @@
+.hedi--search__results {
+  margin-bottom: $spacing-11;
+  mark {
+    background-color: $orange-20;
+  }
+
+  .hedi--article-teaser__entry--grid--content {
+    max-width: 66%;
+  }
+  .hedi--article-teaser__entry--grid--content--text-wrap {
+    margin-top: $spacing-05;
+  }
+
+  .hedi--hedi-card {
+    background-color: transparent;
+    padding: 0;
+  }
+
+  .bx--tile--clickable {
+    background-color: #fff;
+    @include carbon--breakpoint("md") {
+      margin-top: $spacing-05;
+    }
+
+    &:hover {
+      background-color: #e5e5e5;
+    }
+  }
+  .hedi--profile-card--wrap {
+    border-top: 1px solid $gray-30;
+  }
+}
+
+.hedi--search-results {
+  &__headline {
+    @include carbon--breakpoint("md") {
+      margin-bottom: $spacing-08;
+    }
+    @include carbon--breakpoint-down("md") {
+      margin-bottom: $spacing-06;
+    }
+    &--searchtext {
+      @include carbon--breakpoint-down("md") {
+        display: block;
+      }
+    }
+  }
+
+  &__count {
+    @include type-style("body-short-01");
+    color: $gray-60;
+  }
+
+  &__intro-text p,
+  &__intro-text a {
+    @include type-style("helper-text-01");
+  }
+
+  &__filter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // border-bottom: 1px solid $gray-30;
+
+    &--list {
+      @include carbon--breakpoint-down("md") {
+        max-width: 80%;
+      }
+    }
+  }
+}

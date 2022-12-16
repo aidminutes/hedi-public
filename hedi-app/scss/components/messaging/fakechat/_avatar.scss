@@ -1,0 +1,19 @@
+.hedi--avatar {
+  align-items: center;
+  background: $blue-30;
+  display: flex;
+  justify-content: center;
+  &--header {
+    $baseSize: 25px;
+    width: $baseSize;
+    height: $baseSize;
+    border-radius: $baseSize;
+  }
+  &--timeline {
+    $baseSize: 25px;
+    border-radius: $baseSize;
+    font-size: 0.875rem;
+    height: $baseSize;
+    width: $baseSize;
+  }
+}

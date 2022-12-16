@@ -1,0 +1,21 @@
+.hedi--titlegroup {
+  &--article {
+    background-color: #fff;
+    padding-left: $spacing-05 !important;
+  //   @media screen {
+  //     transform: translateY(-99%);
+  //     @include carbon--breakpoint-down("md") {
+  //       transform: none;
+  //     }
+  //   }
+  // }
+
+  // &__container {
+  //   @media screen {
+  //     height: $header-height;
+  //     @include carbon--breakpoint-down("md") {
+  //       height: auto;
+  //     }
+  //   }
+  }
+}

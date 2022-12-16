@@ -1,0 +1,35 @@
+.hedi--toggletip {
+  display: inline-block;
+
+  &__button {
+
+  }
+
+  &__content {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 4px 4px 15px 1px rgba(0, 0, 0, 0.25);
+    padding: $spacing-05;
+    position: absolute;
+    width: 275px;
+    margin-top: 12px;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 0;
+      height: 0;
+      border-left: 12px solid transparent;
+      border-right: 12px solid transparent;
+      border-bottom: 12px solid #fff;
+      top: -12px;
+    }
+
+    &--hidden {
+      display: none;
+    }
+    &--visible {
+      display: block;
+    }
+  }
+}

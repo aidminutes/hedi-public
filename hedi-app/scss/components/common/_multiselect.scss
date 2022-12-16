@@ -1,0 +1,15 @@
+.hedi--multiselect {
+  position: relative;
+  .bx--tag--filter {
+    background-color: $blue-10;
+    color: $blue-primary;
+  }
+
+  .bx--checkbox-label {
+    padding-left: $spacing-07;
+    @include rtl-only {
+      padding-left: reset;
+      padding-right: $spacing-07;
+    }
+  }
+}

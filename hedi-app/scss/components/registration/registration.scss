@@ -1,0 +1,104 @@
+.hedi--group--registration {
+  label[for="registrationcode"] {
+    font-size: 1rem;
+  }
+}
+
+.hedi--register-page {
+  min-height: 90vh;
+  background-color: #fff;
+}
+
+.hedi--registration {
+  &__back-icon {
+    left: 2%;
+    position: absolute;
+
+    svg {
+      cursor: pointer;
+      position: absolute;
+    }
+  }
+
+  &__step-count {
+    color: $gray-50;
+    text-align: center;
+    width: 100%;
+  }
+
+  &__userkind-select {
+    label {
+      margin-bottom: $spacing-06;
+      background-color: #fff;
+    }
+  }
+
+  &__required-hint {
+    p {
+      color: $gray-50;
+      font-size: 0.75rem;
+    }
+  }
+
+  &__login-hint {
+    margin-bottom: $spacing-07;
+    text-align: center;
+  }
+
+  &__modal {
+    text-align: center;
+
+    .bx--modal-content p {
+      padding-right: unset;
+    }
+
+    .bx--modal-container {
+      padding: $spacing-08 $spacing-13 $spacing-06;
+      @include carbon--breakpoint-down("md") {
+        padding: $spacing-05;
+      }
+    }
+    .bx--modal-footer {
+      justify-content: center;
+
+      button {
+        min-width: 100%;
+        width: 100%;
+        @extend .hedi--button--centered;
+      }
+    }
+  }
+
+  &__notification-image {
+    width: 160px;
+    margin: $spacing-09 auto 0;
+    &-caption {
+      color: $blue-50;
+      font-size: 0.75rem;
+      margin-top: $spacing-05;
+    }
+  }
+}
+
+.hedi--userkind-select {
+  label {
+    margin-bottom: $spacing-06;
+    background-color: #fff;
+  }
+
+  &__content-container {
+    display: flex;
+    position: relative;
+  }
+
+  &__image {
+    position: absolute;
+    right: -1%;
+    top: -5px;
+    width: 67px;
+    @include rtl-only() {
+      right: unset;
+      left: -1%;
+    }
+  }
+}

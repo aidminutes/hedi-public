@@ -1,0 +1,29 @@
+.hedi--cares-view {
+  padding-bottom: $spacing-10;
+
+  &__render-details {
+    margin-top: $spacing-05;
+    p {
+      @include carbon--type-style("helper-text-01");
+      margin-bottom: $spacing-03;
+    }
+  }
+
+  &__year {
+    margin-bottom: $spacing-08;
+  }
+  &__month {
+    @include type-style("productive-heading-02");
+    margin-bottom: $spacing-05;
+  }
+  &__languages-services {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    @include carbon--breakpoint-up("md") {
+      max-width: 60%;
+    }
+  }
+}

@@ -1,0 +1,22 @@
+.hedi--headline-copy-link-to-clipboard {
+  .bx--tooltip__label .bx--tooltip__trigger {
+    margin-left: 0;
+  }
+  display: inline-flex;
+  align-items: center;
+}
+
+.hedi--copy-to-clipboard {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+
+
+  &__icon {
+    padding: 1rem;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  @include hideInPrint();
+}

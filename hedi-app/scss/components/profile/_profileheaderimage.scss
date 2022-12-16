@@ -1,0 +1,10 @@
+.hedi--profile-header-image {
+  margin-bottom: $spacing-05;
+
+  > span {
+    height: $header-height !important;
+    @include carbon--breakpoint-down("md") {
+      height: $header-height-mobile !important;
+    }
+  }
+}

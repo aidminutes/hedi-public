@@ -1,0 +1,116 @@
+.hedi--language-skills {
+  table,
+  tbody {
+    width: 100%;
+  }
+  tr {
+    align-items: center;
+    background-color: $gray-10;
+    justify-content: space-between;
+    display: flex;
+    padding: $spacing-05;
+    &:not(:last-child) {
+      margin-bottom: $spacing-03;
+    }
+    td:first-child {
+      min-width: 100px;
+    }
+  }
+  .bx--tile {
+    width: 100%;
+  }
+
+  svg {
+    color: $blue-primary;
+    &:not(:last-child) {
+      margin-inline-end: $spacing-03;
+    }
+
+    &.inactive {
+      color: $blue-20;
+      path:first-child {
+        display: none;
+      }
+    }
+  }
+  @media (max-width: 769px) {
+    table {
+      width: 100%;
+    }
+    tbody tr {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &--organisation {
+    table tr td:last-child {
+      display: none;
+    }
+  }
+}
+
+.hedi--group--language-skills {
+  @media (max-width: 769px) {
+    thead {
+      display: none;
+    }
+    tr {
+      display: grid;
+      grid-template-areas:
+        "left right"
+        "left2 right";
+      height: 100%;
+      padding: $spacing-05;
+      grid-template-columns: 79% 1fr;
+    }
+    td {
+      padding-left: 0;
+      padding-right: 0;
+      &:first-child {
+        grid-area: left;
+      }
+      &:nth-child(2) {
+        grid-area: left2;
+      }
+      &:last-child {
+        grid-area: right;
+        grid-row: span 2;
+        padding: 0;
+        display: flex;
+      }
+    }
+    td[data-th] {
+      display: grid;
+      grid-template-columns: 30% 70%;
+      &:before {
+        content: attr(data-th);
+        font-weight: bold;
+        align-self: center;
+        display: inline-block;
+      }
+    }
+  }
+
+  thead {
+    th:last-child button {
+      width: 100%;
+      min-width: 100%;
+    }
+  }
+  tbody tr td:last-child {
+    text-align: center;
+  }
+
+  // RTL
+  @include ltr-only() {
+    .bx--data-table th:last-child {
+      padding-right: 0;
+    }
+  }
+  @include rtl-only() {
+    .bx--data-table th:last-child {
+      padding-left: 0;
+    }
+  }
+}

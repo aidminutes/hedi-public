@@ -1,0 +1,56 @@
+.hedi--search-midwife-widget {
+  align-items: baseline;
+  background-color: $blue-10;
+  column-gap: 4px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr 1fr;
+  padding: $spacing-04 $spacing-07;
+  width: 100%;
+  @include carbon--breakpoint-down("lg") {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  @media screen and (min-width: 672px) and (max-width: 810px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  &__image-container {
+    display: flex;
+    justify-content: center;
+    img {
+      max-width: 250px !important;
+    }
+  }
+
+  &__multiselect {
+    @extend .hedi--multiselect;
+  }
+
+  &__button-container {
+    justify-content: center;
+    min-width: 100%;
+    width: 100%;
+
+    .inlineLoading {
+      justify-content: center;
+      padding-left: $spacing-02;
+      @include carbon--breakpoint-up("md") {
+        margin-top: 0;
+      }
+    }
+    button {
+      justify-content: center;
+      width: 100%;
+      @include carbon--breakpoint-up("md") {
+        margin-top: $spacing-06;
+      }
+    }
+  }
+  @include carbon--breakpoint-down("md") {
+    align-items: unset;
+    display: flex;
+    flex-direction: column;
+    > div {
+      margin-bottom: $spacing-05;
+    }
+  }
+}

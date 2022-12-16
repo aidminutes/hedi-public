@@ -1,0 +1,38 @@
+.hedi--profile-contact {
+  svg {
+    .cls-1 {
+      fill: $orange-50;
+    }
+  }
+  img {
+    margin-bottom: $spacing-07;
+    margin-left: -1.5rem;
+  }
+
+  address {
+    padding-bottom: $spacing-04;
+  }
+
+  .hedi--consultation-hours-wrapper {
+    padding-top: $spacing-04;
+  }
+
+  // set launch Icon down.
+  // TODO warum ist das an zwei stellen definiert
+  a > svg {
+    margin-bottom: -2px;
+  }
+
+  .hedi--consultation-hours-wrapper {
+    line-height: 1.5;
+  }
+
+  .hedi-seperator {
+    margin-top: $spacing-06;
+    border-color: $cool-gray-40;
+  }
+
+  &__headline {
+    padding-left: $spacing-05;
+  }
+}

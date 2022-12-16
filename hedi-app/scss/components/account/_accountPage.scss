@@ -1,0 +1,148 @@
+.hedi--account {
+  @include carbon--breakpoint-up("md") {
+    padding-top: $spacing-10;
+  }
+  @include carbon--breakpoint-down("md") {
+    background-color: $gray-10;
+  }
+  // Abstand zwischen Formelementen
+  .bx--form-item {
+    margin-bottom: $spacing-06;
+  }
+
+  &__headline-wrap {
+    margin-top: $spacing-08;
+    margin-bottom: 56px;
+  }
+
+  &__section-title {
+    display: flex;
+    align-items: center;
+  }
+
+  &__headline {
+    @include carbon--breakpoint-down("lg") {
+      margin-bottom: $spacing-06;
+    }
+  }
+
+  &__image-wrap {
+    display: flex;
+    justify-content: center;
+  }
+  &__image {
+    width: 160px;
+    &-caption {
+      color: $blue-50;
+      font-size: 0.75rem;
+      margin-bottom: $spacing-09;
+      margin-top: $spacing-05;
+    }
+  }
+
+  &__password-hint {
+    color: $pink-60;
+    line-height: 1em;
+    margin: $spacing-05 0;
+    ul {
+      list-style: disc;
+      list-style-position: inside;
+      margin: 0 0 $spacing-05 0;
+    }
+    p,
+    li {
+      font-size: 0.75rem;
+    }
+  }
+
+  &__content-wrap {
+    background-color: $gray-10;
+    padding: $spacing-05 $spacing-12 $spacing-06;
+    position: relative;
+    @include carbon--breakpoint-down("lg") {
+      padding: $spacing-05 $spacing-13 $spacing-13;
+    }
+    @include carbon--breakpoint-down("md") {
+      padding: $spacing-05;
+    }
+    &--more-space {
+      padding: $spacing-10 $spacing-12 $spacing-07;
+      @include carbon--breakpoint-down("md") {
+        padding: $spacing-05;
+      }
+    }
+    &--blue {
+      background-color: $blue-10;
+    }
+  }
+  &__header {
+    margin-bottom: $spacing-06;
+  }
+  &__text {
+    height: $spacing-10;
+    margin-bottom: $spacing-07;
+    p,
+    a {
+      @include type-style("body-long-01");
+    }
+    a {
+      display: inline;
+    }
+  }
+
+  &__footer {
+    margin-top: $spacing-11;
+    &-buttons {
+      justify-content: space-between;
+      display: flex;
+      @include carbon--breakpoint-down("md") {
+        margin-top: $spacing-05;
+      }
+      button,
+      .bx--btn {
+        @extend .hedi--button--centered;
+        max-width: 100%;
+        width: 100%;
+      }
+      &--column {
+        flex-direction: column;
+
+        button:nth-child(1),
+        a:nth-child(1) {
+          margin-bottom: $spacing-05;
+        }
+      }
+    }
+  }
+
+  &__after-content-wrap {
+    display: flex;
+    justify-content: space-between;
+    margin: $spacing-06 0;
+    @include carbon--breakpoint-down("md") {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  &__footer-image {
+    max-width: 50%;
+    width: 160px;
+    @include carbon--breakpoint-down("md") {
+      order: 0;
+      width: 80px;
+      margin-bottom: $spacing-05;
+    }
+  }
+  &__footer-text {
+    @include carbon--breakpoint-down("md") {
+      order: 1;
+    }
+  }
+
+  &__content {
+    p {
+      @include type-style("body-long-01");
+      text-align: center;
+    }
+  }
+}

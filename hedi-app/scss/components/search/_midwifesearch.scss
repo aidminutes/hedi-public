@@ -1,0 +1,188 @@
+// .hedi--group--searchMidwife {
+//   @media (min-width: 672px) {
+//     margin-top: -100px;
+//   }
+// }
+
+.hedi--group--searchMidwife {
+  padding-bottom: $spacing-03;
+
+  .hedi--separator {
+    margin-bottom: $spacing-06;
+  }
+}
+.hedi--search-midwife {
+  .hedi--hedi-card .hedi--checkbox-button__container {
+    width: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  padding-bottom: $spacing-08;
+  background-color: #fff;
+  &__intro-text,
+  &__data,
+  &__languages,
+  &__services,
+  &__row,
+  &__care-types {
+    margin-bottom: $spacing-06;
+  }
+
+  &__input-grid {
+    background-color: #fff;
+    margin-bottom: $spacing-06;
+    padding-top: $spacing-06;
+    padding-bottom: $spacing-06;
+  }
+
+  &__data {
+    font-size: 1rem;
+  }
+
+  &__progress-indicator {
+    display: flex;
+    justify-content: center;
+    margin-top: $spacing-05;
+    margin-bottom: $spacing-08;
+
+    .bx--inline-loading {
+      justify-content: center;
+    }
+
+    &__text {
+      justify-content: flex-start;
+    }
+
+    .bx--tag--filter {
+      cursor: default;
+    }
+  }
+
+  &__send-request {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: $spacing-05;
+    margin-bottom: $spacing-05;
+
+    .bx--inline-loading {
+      justify-content: center;
+    }
+
+    &__text {
+      justify-content: flex-start;
+    }
+
+    .bx--tag--filter {
+      cursor: default;
+    }
+
+    &__tooltip {
+      padding-top: 17px;
+      padding-right: 17px;
+      @include rtl-only() {
+        padding-left: 17px;
+      }
+    }
+  }
+
+  &__header {
+    color: $gray-80;
+    padding-bottom: $spacing-06;
+
+    .description {
+      color: $gray-70;
+    }
+  }
+
+  &__widget-line {
+    margin-bottom: $spacing-06;
+  }
+
+  &__care-types {
+    background-color: $blue-primary;
+    padding: $spacing-06;
+
+    h3,
+    h4 {
+      color: #fff;
+      margin-bottom: $spacing-06;
+    }
+
+    &__checkbox-wrapper {
+      $fontSize: 1.25rem;
+      background-color: #fff;
+      border-radius: 8px;
+      color: $blue-primary;
+      display: flex;
+      padding: $spacing-06;
+      flex-direction: column;
+      @media (min-width: 672px) {
+        flex-direction: row;
+      }
+      * {
+        font-size: 1.25rem !important;
+      }
+      .bx--form-item.bx--checkbox-wrapper {
+        margin-top: 0;
+        margin-bottom: 0;
+        input:checked + .bx--checkbox-label:before {
+          background-color: $blue-primary;
+          border: 1px solid $blue-primary;
+        }
+
+        .bx--checkbox-label {
+          &-text {
+            padding-left: 12px;
+          }
+          &:before {
+            height: $fontSize;
+            width: $fontSize;
+          }
+          &:after {
+            position: absolute;
+            top: 0.4rem;
+            width: 0.7625rem;
+            height: 0.4125rem;
+          }
+        }
+      }
+      > div {
+        flex-grow: 0;
+        margin-right: 40px;
+      }
+    }
+  }
+
+  &__result-list {
+    .bx--row {
+      @include carbon--breakpoint-down("md") {
+        max-width: initial;
+      }
+      &:not(:first-child) {
+        margin-top: $spacing-02;
+      }
+    }
+
+    .hedi--hedi-card {
+      border-bottom: 1px solid $gray-20;
+    }
+
+    .hedi--hedi-card__details {
+      padding-top: $spacing-02;
+      .bx--btn {
+        grid-column: 2;
+        justify-self: end;
+        align-self: end;
+        min-width: 225px;
+        @include carbon--breakpoint-down("md") {
+          margin-top: $spacing-04;
+          grid-column: 1;
+          min-width: 75%;
+          justify-self: start;
+          height: 36px;
+        }
+      }
+    }
+  }
+}

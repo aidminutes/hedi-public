@@ -1,0 +1,33 @@
+.hedi--msg--image-detail {
+  position: fixed;
+  z-index: 8002;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(8, 26, 40, 0.8);
+  @media screen and (max-width: 40em) {
+    background-color: rgba(8, 26, 40, 1);
+  }
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+
+  img{
+    max-height: 100%;
+    max-width: 100%;
+    padding: 1rem;
+  }
+
+  .hedi--msg-image-detail-overlay--close {
+    position: absolute !important;
+    top: 4rem;
+    right: 1rem;
+    background-color: white;
+    &:hover{
+      background-color: #2a84c6;
+    }
+  }
+}

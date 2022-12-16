@@ -1,0 +1,22 @@
+.hedi--structured-list {
+  margin-bottom: $spacing-05;
+  .bx--structured-list-td {
+    padding: $spacing-03;
+  }
+
+  &--contact {
+    table-layout: fixed;
+
+      .bx--structured-list-row
+      .bx--structured-list-td:first-of-type {
+      width: 90px;
+    }
+
+      .bx--structured-list-row
+      .bx--structured-list-td:last-of-type {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+  }
+}

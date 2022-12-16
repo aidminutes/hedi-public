@@ -1,0 +1,24 @@
+.hedi--pregnancy-page {
+  .bx--checkbox-label {
+    margin: $spacing-06 0;
+  }
+
+  &__redirect {
+    margin: $spacing-07 0;
+  }
+}
+.w100p {
+  width: 100%;
+  display: flex;
+}
+.hedi--pregnancy-form {
+  .bx--form-item {
+    margin-bottom: $spacing-08;
+  }
+
+  .hedi--pregnancy__intro {
+    @include carbon--breakpoint-up("md") {
+      padding-inline-end: 25%;
+    }
+  }
+}

@@ -1,0 +1,75 @@
+.hedi--user-tile {
+  $tileHeight: 330px;
+  background-color: #fff;
+  border: 1px solid transparent;
+  margin-bottom: $spacing-07;
+  padding: $spacing-05;
+  position: relative;
+  width: 100%;
+
+  &:hover {
+    border: 1px solid $blue-primary;
+  }
+
+  @include carbon--breakpoint-up("md") {
+    min-height: $tileHeight;
+    // height: 100%;
+  }
+
+  &--empty {
+    background-color: $gray-10;
+    border: 1px solid $blue-primary;
+
+    .hedi--user-tile__above-content {
+      display: none;
+    }
+  }
+
+  &--with-border {
+    border: 1px solid $gray-20;
+  }
+
+  &__above-content {
+    height: $spacing-09;
+    margin-bottom: $spacing-07;
+
+    h3 {
+      color: $blue-primary;
+      font-size: 20px;
+    }
+  }
+
+  &__edit-button {
+    background-color: $blue-10;
+    border: none;
+    cursor: pointer;
+    padding: $spacing-05;
+    position: absolute;
+    right: $spacing-05;
+    top: $spacing-05;
+    @include rtl-only() {
+      right: unset;
+      left: $spacing-05;
+    }
+
+    &:hover {
+      background: $blue-20;
+    }
+  }
+
+  &__empty-state {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @include carbon--breakpoint-up("md") {
+      min-height: 298px; // tileheight - 2 * $spacing-05
+    }
+    &-text {
+      color: $blue-primary;
+      text-align: center;
+      margin-top: $spacing-06;
+      padding: 0 $spacing-05;
+    }
+  }
+}

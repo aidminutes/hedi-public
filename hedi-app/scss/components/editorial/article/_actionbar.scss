@@ -1,0 +1,83 @@
+.hedi--action-bar {
+  @extend .hedi--sticky-bar;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  z-index: 1;
+
+  &__sub-actions {
+    background-color: #fff;
+    padding-bottom: $spacing-05;
+    position: sticky;
+    top: 6rem;
+
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+
+    @media (min-width: 672px) {
+      justify-content: flex-end;
+    }
+  }
+
+  &__sub-actions-container {
+    background-color: #fff;
+    position: sticky;
+    top: 7.55rem;
+    z-index: 1;
+    @media (min-width: 672px) {
+      top: 8rem;
+    }
+    @include hideInPrint();
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1rem;
+    @media (min-width: 672px) {
+      align-items: center;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .bx--btn--ghost {
+      color: #161616;
+    }
+  }
+
+  &__item {
+    @include carbon--type-style("helper-text-01");
+    cursor: pointer;
+    display: flex;
+    .bx--tooltip__label .bx--tooltip__trigger {
+      margin-left: 0;
+      margin-right: $spacing-02;
+      @include rtl-only() {
+        margin-right: 0;
+        margin-left: $spacing-02;
+      }
+    }
+    &--active {
+      font-weight: 700;
+    }
+    > svg {
+      margin-right: $spacing-02;
+      @include rtl-only() {
+        margin-right: 0;
+        margin-left: $spacing-02;
+      }
+    }
+    @media (min-width: 672px) {
+      margin: 0 0 0 $spacing-06;
+      &:first-child {
+        margin: 0;
+      }
+    }
+  }
+
+  .hedi--separator {
+    margin: $spacing-03 0 0;
+  }
+  @include hideInPrint();
+}

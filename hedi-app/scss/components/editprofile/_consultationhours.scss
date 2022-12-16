@@ -1,0 +1,121 @@
+.hedi--consultation-hours {
+  &__row {
+    margin-bottom: $spacing-06;
+    label {
+      @include carbon--breakpoint("md") {
+        display: none;
+      }
+    }
+
+    .bx--form-item {
+      margin-bottom: 0 !important;
+      @include carbon--breakpoint-down("md") {
+        margin-bottom: $spacing-06 !important;
+      }
+    }
+  }
+
+  tr {
+    display: flex;
+    align-items: center;
+    padding: $spacing-05;
+    background-color: #fff;
+    &:not(:last-child) {
+      margin-bottom: $spacing-03;
+    }
+    td:first-child {
+      min-width: 100px;
+    }
+  }
+  .bx--tile {
+    width: 100%;
+  }
+
+  svg {
+    color: $orange-50;
+
+    &.inactive {
+      color: $orange-20;
+      path:first-child {
+        display: none;
+      }
+    }
+  }
+  @include carbon--breakpoint-down("lg") {
+    table {
+      width: 100%;
+    }
+    tbody tr {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}
+
+.hedi--group--consultation-hours {
+  @include carbon--breakpoint-down("lg") {
+    thead {
+      display: none;
+    }
+    tr {
+      display: grid;
+      grid-template-areas:
+        "left right"
+        "left2 right"
+        "left3 right";
+      height: 100%;
+      padding: $spacing-05;
+      grid-template-columns: 79% 1fr;
+    }
+    td {
+      padding-left: 0;
+      padding-right: 0;
+      &:first-child {
+        grid-area: left;
+      }
+      &:nth-child(2) {
+        grid-area: left2;
+      }
+      &:nth-child(3) {
+        grid-area: left3;
+      }
+      &:last-child {
+        grid-area: right;
+        grid-row: span 3;
+        padding: 0;
+        display: flex;
+      }
+    }
+    td[data-th] {
+      display: grid;
+      grid-template-columns: 30% 70%;
+      &:before {
+        content: attr(data-th);
+        font-weight: bold;
+        align-self: center;
+        display: inline-block;
+      }
+    }
+  }
+
+  thead {
+    th:last-child button {
+      width: 100%;
+    }
+  }
+  tbody tr td:last-child {
+    text-align: center;
+  }
+
+  // RTL
+  @include ltr-only() {
+    .bx--data-table th:last-child {
+      padding-right: 0;
+    }
+  }
+  @include rtl-only() {
+    .bx--data-table th:last-child {
+      padding-left: 0;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+.hedi__pages-report-table {
+  width: 100%;
+  
+  td, th {
+    border: 1px solid #e7e7e7;
+  }
+
+  thead th {
+    font-weight: bold;
+  }
+  tbody tr:nth-child(even) {
+    background: rgb(206, 225, 255);
+  }
+}

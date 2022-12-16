@@ -1,0 +1,15 @@
+.hedi--radio-group {
+  margin-top: $spacing-03;
+  margin-bottom: $spacing-05;
+
+  display: flex;
+  > div:not(:last-child) {
+    margin-inline-end: $spacing-05;
+  }
+  > div {
+    input:hover,
+    label:hover {
+      cursor: pointer;
+    }
+  }
+}

@@ -1,0 +1,31 @@
+.hedi--labeled-list {
+  @include carbon--breakpoint-down("md") {
+    margin-bottom: $spacing-05;
+  }
+  &__headline {
+    @include type-style("helper-text-01");
+    color: $gray-90;
+    margin-bottom: $spacing-03;
+  }
+
+  .inactive {
+    color: $gray-50;
+  }
+  .half-active {
+    color: $gray-50;
+  }
+
+  &__checkmark {
+    color: $blue-70;
+    margin-inline-end: $spacing-03;
+  }
+
+  ul {
+    li {
+      margin-top: $spacing-01;
+      display: flex;
+      align-items: center;
+      @include type-style("body-short-01");
+    }
+  }
+}

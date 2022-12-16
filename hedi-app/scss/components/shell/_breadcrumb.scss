@@ -1,0 +1,43 @@
+.hedi--breadcrumb {
+  + h1 {
+    @include carbon--breakpoint-down("md") {
+      margin-top: $spacing-08;
+    }
+  }
+  &__back-link {
+    margin: 0 $spacing-03;
+  }
+  .bx--link {
+    color: $gray-100 !important;
+  }
+
+  .bx--breadcrumb {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  @include carbon--breakpoint-down("md") {
+    .bx--breadcrumb-item--current .bx--link {
+      white-space: normal;
+    }
+  }
+  &__graphical {
+    display: flex;
+    justify-content: flex-start;
+    margin: $spacing-05 0 $spacing-03 0;
+    .default--stroke {
+      // TODO Farbe
+      border: 2px solid red;
+    }
+    > div {
+      width: 16px;
+    }
+  }
+  @include hideInPrint();
+
+  @include rtl-only {
+    svg {
+      transform: rotate(180deg);
+      margin-left: $spacing-03;
+    }
+  }
+}

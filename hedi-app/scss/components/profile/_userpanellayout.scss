@@ -1,0 +1,12 @@
+.hedi--userpanel-layout {
+  padding-bottom: $spacing-05;
+  &__intro-text {
+    margin-bottom: $spacing-08;
+    p {
+      @include type-style("body-short-01");
+    }
+  }
+  @include carbon--breakpoint-up("md") {
+    padding-inline-start: mini-units(32);
+  }
+}

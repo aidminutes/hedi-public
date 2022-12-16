@@ -1,0 +1,53 @@
+.hedi--group--search__grid {
+  background-color: #fff;
+  min-height: 40vh;
+}
+
+.hedi--search-view {
+  position: relative;
+  &__intro-text {
+    margin-top: $spacing-07;
+    p, a {
+      @include type-style("body-long-01");
+    }
+  }
+  &__cta-headline {
+    margin-top: $spacing-07;
+  }
+
+  &__input-container {
+    display: grid;
+    grid-template-columns: 85% 15%;
+    @include carbon--breakpoint-down("md") {
+      flex-direction: column;
+      grid-template-columns: 1fr;
+    }
+
+    .bx--select label {
+      display: none;
+    }
+    select {
+      min-width: 280px;
+    }
+  }
+  &__button-container {
+    width: 100%;
+    @include carbon--breakpoint-down("md") {
+      .bx--btn {
+        max-width: 100%;
+        width: 100%;
+      }
+    }
+  }
+  &__button--loading-indicator {
+    width: 100%;
+    > .bx--inline-loading {
+      justify-content: center;
+    }
+  }
+}
+
+.hedi--group--search,
+.hedi--group--searchProfile {
+  min-height: 50vh;
+}

@@ -1,0 +1,14 @@
+.hedi--light-slider {
+  .bx--slider__range-label {
+    display: none;
+  }
+
+  > div > .bx--form-item {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  &_value-indicator {
+    display: inline-block;
+    vertical-align: sub;
+  }
+}

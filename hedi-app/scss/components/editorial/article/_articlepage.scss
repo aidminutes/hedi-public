@@ -1,0 +1,125 @@
+.hedi--article-page {
+  background-color: #fff;
+  position: relative;
+
+  h1 {
+    @media screen {
+      margin-top: $spacing-06;
+    }
+    @media print {
+      font-weight: 400;
+    }
+  }
+
+  @media print {
+    width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  a[target="_blank"] {
+    svg {
+      fill: $blue-primary;
+    }
+    &::after {
+      content: url("../public/svg/launch.svg");
+      margin: 0px 0px 0px 2px;
+      font-size: 1.1rem;
+      display: inline-block;
+    }
+  }
+
+  .hedi--titlegroup {
+    margin-bottom: 0;
+    padding-top: $spacing-05;
+    position: relative;
+  }
+
+  &__content {
+    direction: ltr;
+    font-size: 1rem;
+    p,
+    li {
+      margin-bottom: $spacing-07;
+      @media only screen and (min-width: 42rem) {
+        font-size: 1.25rem;
+      }
+    }
+    @include printExcluded {
+      // h2,
+      // h3,
+      // h4,
+      // h5,
+      // .hedi--headline-copy-link-to-clipboard {
+      //   margin-bottom: $spacing-05;
+      // }
+
+      > p {
+        // margin: $spacing-07 0;
+        &:first-of-type::first-letter {
+          font-size: $spacing-07;
+          line-height: $spacing-05;
+        }
+      }
+
+      .bx--link {
+        display: inline;
+      }
+    }
+
+    ul {
+      // TODO choose sign
+      // list-style: "\2714" inside;
+      list-style: none;
+      text-indent: -10px; /* key property */
+      margin-left: 25px; /* key property */
+      @include rtl-only() {
+        margin-left: 0; /* key property */
+        margin-right: 25px; /* key property */
+      }
+    }
+
+    li {
+      line-height: 1.5em;
+      margin-bottom: 0.75em;
+      &::before {
+        content: "\25CF";
+        // colors comes from hedi-category-color.scss
+        // color: $green-30;
+        display: inline-block;
+        width: 10px;
+      }
+    }
+
+    a {
+      font-size: inherit;
+    }
+    &--rtl {
+      direction: rtl;
+    }
+  }
+
+  &--recommended-profiles {
+    padding-top: $spacing-09;
+    padding-bottom: $spacing-12;
+  }
+
+  .hedi--headline-copy-link-to-clipboard {
+    > *:target::before {
+      display: block;
+      content: " ";
+      margin-top: calc(-48px + (-89px));
+      height: calc(48px + 89px);
+      visibility: hidden;
+      pointer-events: none;
+      @media (min-width: 672px) {
+        margin-top: calc(-48px + (-64px));
+        height: calc(48px + 64px);
+      }
+    }
+  }
+
+  .hedi--tag-list {
+    margin: $spacing-07 0;
+  }
+}

@@ -1,0 +1,130 @@
+.hedi--chat {
+  &__timeline {
+    height: calc(100vh - 47px);
+    background-color: $gray-10;
+    > div {
+      // padding: 0 1em;
+      max-height: calc(100vh - 47px);
+      overflow: scroll;
+      position: relative;
+    }
+  }
+
+  &__message--wrap {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 0.75em;
+    max-height: calc(100vh - 47px);
+    .bx--tile {
+      margin: 5px 0;
+      max-width: 90%;
+      padding: 0.5em;
+      min-height: 1em;
+      border-radius: 10px;
+      color: white;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__message {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.875rem;
+    line-height: 1.4em;
+    padding: 5px;
+
+    bdo {
+      unicode-bidi: plaintext;
+      p {
+        font-size: 0.875rem;
+        line-height: 1.4em;
+      }
+    }
+    &--delivery-status {
+      &:after {
+        margin: 0 0 0 3px;
+      }
+      &--send {
+        &:after {
+          content: "\2713";
+        }
+      }
+      &--delivered {
+        &:after {
+          content: "\2713\2713";
+        }
+      }
+      &--read {
+        &:after {
+          color: $green-primary;
+          content: "\2713\2713";
+        }
+      }
+    }
+    &--timestamp {
+      direction: ltr;
+      font-size: 0.6rem;
+      text-align: end;
+      margin: 5px -5px -5px 0;
+    }
+    &:after,
+    &:before {
+      content: "";
+      width: 0px;
+      height: 0px;
+      position: absolute;
+    }
+    &-from__user {
+      $userColor: $blue-20;
+      color: black;
+      align-self: flex-end;
+      background-color: $userColor;
+      @include rtl-only {
+        align-self: flex-start;
+      }
+
+      &:after {
+        border-left: 5px solid $userColor;
+        border-right: 5px solid transparent;
+        border-top: 5px solid transparent;
+        border-bottom: 5px solid transparent;
+        right: -9px;
+        top: 8px;
+        // @include rtl-only() {
+        //   border-left: 5px solid transparent;
+        //   border-right: 5px solid $userColor;
+        //   border-top: 5px solid transparent;
+        //   border-bottom: 5px solid transparent;
+        //   left: -9px;
+        //   right: unset;
+        // }
+      }
+    }
+    &-from__contact {
+      $contactColor: #fff;
+      color: #000;
+      align-self: flex-start;
+      background-color: $contactColor;
+      @include rtl-only {
+        align-self: flex-end;
+      }
+
+      &:before {
+        border-left: 5px solid transparent;
+        border-right: 5px solid $contactColor;
+        border-top: 5px solid transparent;
+        border-bottom: 5px solid transparent;
+        left: -9px;
+        top: 8px;
+        // @include rtl-only() {
+        //   border-left: 5px solid $contactColor;
+        //   border-right: 5px solid transparent;
+        //   border-top: 5px solid transparent;
+        //   border-bottom: 5px solid transparent;
+        //   right: -9px;
+        // }
+      }
+    }
+  }
+}

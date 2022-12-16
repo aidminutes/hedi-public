@@ -1,0 +1,473 @@
+// @import './fonts';
+// @include hedi-fonts;
+
+// all options can be found here
+// https://www.carbondesignsystem.com/guidelines/themes/overview/#typography
+//
+// defined here carbon-components/scss/globals/scss/vendor/@carbon/elements/scss/type/_styles.scss
+
+@mixin theme-typography {
+  //example for changing h1: they did the numbering in reverse h1 = heading-06,... h6 = heading-01
+  //internally they don't hardcode sizes but use functions like font-size: carbon--type-scale(1),
+  $productive-heading-01: (
+    font-family: carbon--font-family("sans"),
+    font-size: 0.875rem,
+    font-weight: 500,
+    line-height: 1.3,
+    letter-spacing: 0.16px,
+  ) !global;
+  $heading-02: (
+    font-family: carbon--font-family("sans"),
+    font-size: 1rem,
+    font-weight: 400,
+    line-height: 1.375,
+    letter-spacing: 0,
+  ) !global;
+  $productive-heading-02: (
+    font-family: carbon--font-family("sans"),
+    font-size: 1rem,
+    font-weight: 500,
+    line-height: 1.375,
+    letter-spacing: 0,
+  ) !global;
+  $productive-heading-03: (
+    font-family: carbon--font-family("sans"),
+    font-size: 1.25rem,
+    font-weight: 400,
+    line-height: 1.3,
+    letter-spacing: 0,
+  ) !global;
+  $productive-heading-04: (
+    font-family: carbon--font-family("sans"),
+    font-size: 1.5rem,
+    font-weight: 400,
+    line-height: 1.25,
+    letter-spacing: -0.16px,
+  ) !global;
+  $productive-heading-05: (
+    font-family: carbon--font-family("serif"),
+    font-size: 2rem,
+    font-weight: 300,
+    line-height: 1.25,
+    letter-spacing: -0.16px,
+  ) !global;
+  $productive-heading-06: (
+    font-family: carbon--font-family("serif"),
+    font-size: 2.5rem,
+    font-weight: 300,
+    line-height: 1.2,
+    letter-spacing: -0.32px,
+  ) !global;
+  // Universal
+  // $caption-01: (
+  //   font-family: carbon--font-family('sans'),
+  //   font-size: carbon--type-scale(1),
+  //   font-weight: carbon--font-weight('regular'),
+  //   line-height: carbon--rem(16px),
+  //   letter-spacing: 0.32px,
+  // ) !global;
+  // $label-01: (
+  //   font-family: carbon--font-family('sans'),
+  //   font-size: carbon--type-scale(1),
+  //   font-weight: carbon--font-weight('regular'),
+  //   line-height: carbon--rem(16px),
+  //   letter-spacing: 0.32px,
+  // ) !global;
+  $helper-text-01: (
+    font-family: carbon--font-family('sans'),
+    font-size: 0.75rem,
+    font-weight: 400,
+    line-height: 1rem,
+    letter-spacing: 0.32px,
+  ) !global;
+  // $body-short-01: (
+  //   font-family: carbon--font-family('sans'),
+  //   font-size: carbon--type-scale(2),
+  //   font-weight: carbon--font-weight('regular'),
+  //   line-height: carbon--rem(18px),
+  //   letter-spacing: 0.16px,
+  // ) !global;
+  // $body-long-01: (
+  //   font-family: carbon--font-family('sans'),
+  //   font-size: carbon--type-scale(2),
+  //   font-weight: carbon--font-weight('regular'),
+  //   line-height: carbon--rem(20px),
+  //   letter-spacing: 0.16px,
+  // ) !global;
+  // $body-short-02: (
+  //   font-family: carbon--font-family('sans'),
+  //   font-size: carbon--type-scale(3),
+  //   font-weight: carbon--font-weight('regular'),
+  //   line-height: carbon--rem(22px),
+  //   letter-spacing: 0,
+  // ) !global;
+  // $body-long-02: (
+  //   font-family: carbon--font-family('sans'),
+  //   font-size: carbon--type-scale(3),
+  //   font-weight: carbon--font-weight('regular'),
+  //   line-height: carbon--rem(24px),
+  //   letter-spacing: 0,
+  // ) !global;
+  // $code-01: (
+  //   font-family: carbon--font-family('mono'),
+  //   font-size: carbon--type-scale(1),
+  //   font-weight: carbon--font-weight('regular'),
+  //   line-height: carbon--rem(16px),
+  //   letter-spacing: 0.32px,
+  // ) !global;
+  // $code-02: (
+  //   font-family: carbon--font-family('mono'),
+  //   font-size: carbon--type-scale(2),
+  //   font-weight: carbon--font-weight('regular'),
+  //   line-height: carbon--rem(20px),
+  //   letter-spacing: 0.32px,
+  // ) !global;
+  // $heading-01: (
+  //   font-size: 0.875rem,
+  //   font-weight: 600,
+  //   line-height: 1.29,
+  //   letter-spacing: 0.16px,
+  // ) !global;
+  // $productive-heading-01: (
+  //   font-size: 0.875rem,
+  //   font-weight: 600,
+  //   line-height: 1.29,
+  //   letter-spacing: 0.16px,
+  // ) !global;
+  // $heading-02: (
+  //   font-size: 1rem,
+  //   font-weight: 600,
+  //   line-height: 1.375,
+  //   letter-spacing: 0,
+  // ) !global;
+  // $productive-heading-02: (
+  //   font-size: 1rem,
+  //   font-weight: 600,
+  //   line-height: 1.375,
+  //   letter-spacing: 0,
+  // ) !global;
+  // $productive-heading-03: (
+  //   font-size: 1.25rem,
+  //   font-weight: 400,
+  //   line-height: 1.4,
+  //   letter-spacing: 0,
+  // ) !global;
+  // $productive-heading-04: (
+  //   font-size: 1.75rem,
+  //   font-weight: 400,
+  //   line-height: 1.29,
+  //   letter-spacing: 0,
+  // ) !global;
+  // $productive-heading-05: (
+  //   font-size: 2rem,
+  //   font-weight: 400,
+  //   line-height: 1.25,
+  //   letter-spacing: 0,
+  // ) !global;
+  // $productive-heading-06: (
+  //   font-size: 2.625rem,
+  //   font-weight: 300,
+  //   line-height: 1.199,
+  //   letter-spacing: 0,
+  // ) !global;
+  // $productive-heading-07: (
+  //   font-size: 3.375rem,
+  //   font-weight: 300,
+  //   line-height: 1.19,
+  //   letter-spacing: 0,
+  // ) !global;
+  // $expressive-heading-01: (
+  //   font-size: 0.875rem,
+  //   font-weight: 600,
+  //   line-height: 1.25,
+  //   letter-spacing: 0.16px,
+  // ) !global;
+  // $expressive-heading-02: (
+  //   font-size: 1rem,
+  //   font-weight: 600,
+  //   line-height: 1.5,
+  //   letter-spacing: 0,
+  // ) !global;
+  // $expressive-heading-03: (
+  //   font-size: 1.25rem,
+  //   font-weight: 400,
+  //   line-height: 1.4,
+  //   letter-spacing: 0,
+  //   breakpoints: (
+  //     xlg: (
+  //       font-size: 1.25rem,
+  //       line-height: 1.25,
+  //     ),
+  //     max: (
+  //       font-size: 1.5rem,
+  //       line-height: 1.334,
+  //     ),
+  //   ),
+  // ) !global;
+  // $expressive-heading-04: (
+  //   font-size: 1.75rem,
+  //   font-weight: 400,
+  //   line-height: 1.29,
+  //   letter-spacing: 0,
+  //   breakpoints: (
+  //     xlg: (
+  //       font-size: 1.75rem,
+  //       line-height: 1.25,
+  //     ),
+  //     max: (
+  //       font-size: 2rem,
+  //     ),
+  //   ),
+  // ) !global;
+  // $expressive-heading-05: (
+  //   font-size: 2rem,
+  //   font-weight: 400,
+  //   line-height: 1.25,
+  //   letter-spacing: 0,
+  //   breakpoints: (
+  //     md: (
+  //       font-size: 2.25rem,
+  //       font-weight: 300,
+  //       line-height: 1.22,
+  //       letter-spacing: 0,
+  //     ),
+  //     lg: (
+  //       font-size: 2.625rem,
+  //       font-weight: 300,
+  //       line-height: 1.19,
+  //       letter-spacing: 0,
+  //     ),
+  //     xlg: (
+  //       font-size: 3rem,
+  //       font-weight: 300,
+  //       line-height: 1.17,
+  //       letter-spacing: 0,
+  //     ),
+  //     max: (
+  //       font-size: 3.75rem,
+  //       font-weight: 300,
+  //       letter-spacing: 0,
+  //     ),
+  //   ),
+  // ) !global;
+  // $expressive-heading-06: (
+  //   font-size: 2rem,
+  //   font-weight: 600,
+  //   line-height: 1.25,
+  //   letter-spacing: 0,
+  //   breakpoints: (
+  //     md: (
+  //       font-size: 2.25rem,
+  //       font-weight: 600,
+  //       line-height: 1.22,
+  //       letter-spacing: 0,
+  //     ),
+  //     lg: (
+  //       font-size: 2.625rem,
+  //       font-weight: 600,
+  //       line-height: 1.19,
+  //       letter-spacing: 0,
+  //     ),
+  //     xlg: (
+  //       font-size: 3rem,
+  //       font-weight: 600,
+  //       line-height: 1.17,
+  //       letter-spacing: 0,
+  //     ),
+  //     max: (
+  //       font-size: 3.75rem,
+  //       font-weight: 600,
+  //       letter-spacing: 0,
+  //     ),
+  //   ),
+  // ) !global;
+  // $expressive-paragraph-01: (
+  //   font-size: 1.5rem,
+  //   font-weight: 300,
+  //   line-height: 1.334,
+  //   letter-spacing: 0,
+  //   lg: (
+  //     font-size: 1.75rem,
+  //     line-height: 1.29,
+  //   ),
+  //   max: (
+  //     font-size: 2rem,
+  //     line-height: 1.25,
+  //   ),
+  // ) !global;
+  // $quotation-01: (
+  //   font-size: 1.25rem,
+  //   font-weight: 400,
+  //   line-height: 1.3,
+  //   letter-spacing: 0,
+  //   breakpoints: (
+  //     md: (
+  //       font-size: 1.25rem,
+  //       font-weight: 400,
+  //       letter-spacing: 0,
+  //     ),
+  //     lg: (
+  //       font-size: 1.5rem,
+  //       font-weight: 400,
+  //       line-height: 1.334,
+  //       letter-spacing: 0,
+  //     ),
+  //     xlg: (
+  //       font-size: 1.75rem,
+  //       font-weight: 400,
+  //       line-height: 1.29,
+  //       letter-spacing: 0,
+  //     ),
+  //     max: (
+  //       font-size: 2rem,
+  //       font-weight: 400,
+  //       line-height: 1.25,
+  //       letter-spacing: 0,
+  //     ),
+  //   ),
+  // ) !global;
+  // $quotation-02: (
+  //   font-size: 2rem,
+  //   font-weight: 300,
+  //   line-height: 1.25,
+  //   letter-spacing: 0,
+  //   breakpoints: (
+  //     md: (
+  //       font-size: 2.25rem,
+  //       line-height: 1.22,
+  //     ),
+  //     lg: (
+  //       font-size: 2.625rem,
+  //       line-height: 1.19,
+  //     ),
+  //     xlg: (
+  //       font-size: 3rem,
+  //       line-height: 1.17,
+  //     ),
+  //     max: (
+  //       font-size: 3.75rem,
+  //     ),
+  //   ),
+  // ) !global;
+  $display-01: (
+    font-size: 1.875rem,
+    font-weight: 400,
+    line-height: 1.2,
+    letter-spacing: 0,
+    breakpoints: (
+      md: (
+        font-size: 3.375rem,
+        font-weight: 300,
+        line-height: 1.185,
+      ),
+    ),
+  ) !global;
+  // $display-02: (
+  //   font-size: 2.625rem,
+  //   font-weight: 600,
+  //   line-height: 1.19,
+  //   letter-spacing: 0,
+  //   breakpoints: (
+  //     md: (
+  //       font-size: 2.625rem,
+  //     ),
+  //     lg: (
+  //       font-size: 3.375rem,
+  //     ),
+  //     xlg: (
+  //       font-size: 3.75rem,
+  //       line-height: 1.16,
+  //     ),
+  //     max: (
+  //       font-size: 4.75rem,
+  //       line-height: 1.13,
+  //     ),
+  //   ),
+  // ) !global;
+  // $display-03: (
+  //   font-size: 2.625rem,
+  //   font-weight: 300,
+  //   line-height: 1.19,
+  //   letter-spacing: 0,
+  //   breakpoints: (
+  //     md: (
+  //       font-size: 4.25rem,
+  //       line-height: 1.15,
+  //     ),
+  //     lg: (
+  //       font-size: 5.75rem,
+  //       line-height: 1.11,
+  //       letter-spacing: -0.64px,
+  //     ),
+  //     xlg: (
+  //       font-size: 7.625rem,
+  //       line-height: 1.07,
+  //     ),
+  //     max: (
+  //       font-size: 9.75rem,
+  //       line-height: 1.05,
+  //       letter-spacing: -0.96px,
+  //     ),
+  //   ),
+  // ) !global;
+  // $display-04: (
+  //   font-size: 2.625rem,
+  //   font-weight: 600,
+  //   line-height: 1.19,
+  //   letter-spacing: 0,
+  //   breakpoints: (
+  //     md: (
+  //       font-size: 4.25rem,
+  //       line-height: 1.15,
+  //     ),
+  //     lg: (
+  //       font-size: 5.75rem,
+  //       line-height: 1.11,
+  //       letter-spacing: -0.64px,
+  //     ),
+  //     xlg: (
+  //       font-size: 7.625rem,
+  //       line-height: 1.07,
+  //       letter-spacing: -0.64px,
+  //     ),
+  //     max: (
+  //       font-size: 9.75rem,
+  //       line-height: 1.05,
+  //       letter-spacing: -0.96px,
+  //     ),
+  //   ) !global;
+  // )
+}
+
+// don't use these directly, just here for demonstration how carbon uses these internally
+// carbon-components/scss/globals/scss/vendor/@carbon/type/scss/_reset.scss
+//
+// @mixin carbon--default-type {
+//   h1 {
+//     @include carbon--type-style('productive-heading-06');
+//   }
+//   h2 {
+//     @include carbon--type-style('productive-heading-05');
+//   }
+//   h3 {
+//     @include carbon--type-style('productive-heading-04');
+//   }
+//   h4 {
+//     @include carbon--type-style('productive-heading-03');
+//   }
+//   h5 {
+//     @include carbon--type-style('productive-heading-02');
+//   }
+//   h6 {
+//     @include carbon--type-style('productive-heading-01');
+//   }
+//   p {
+//     @include carbon--type-style('body-long-02');
+//   }
+//   a {
+//     color: #0062ff;
+//   }
+//   em {
+//     font-style: italic;
+//   }
+// }

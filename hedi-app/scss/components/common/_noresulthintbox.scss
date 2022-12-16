@@ -1,0 +1,42 @@
+.hedi--no-results-hint-box {
+  align-items: center;
+  // display: flex;
+
+  &__container {
+    > p {
+      margin-bottom: $spacing-09;
+    }
+  }
+
+  > span {
+    max-width: 160px !important;
+    margin-inline-end: $spacing-05 !important;
+  }
+
+  ul {
+    line-height: 1.6em;
+    list-style: disc;
+  }
+
+  h4 {
+    margin-bottom: $spacing-03;
+  }
+
+  &__icon {
+    width: 210px;
+  }
+
+  &__text {
+    padding-inline-start: $spacing-07;
+  }
+
+  &__addtional-hint {
+    background-color: $blue-10;
+    padding: $spacing-05;
+    margin-top: $spacing-07;
+    @include carbon--breakpoint("md") {
+      max-width: 50%;
+      min-width: 375px;
+    }
+  }
+}

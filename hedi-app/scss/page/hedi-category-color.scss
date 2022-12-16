@@ -1,0 +1,182 @@
+// HEDI CATEGORY COLOR
+$primary-color-map: (
+  pregnancy: $blue-primary,
+  birth: $pink-primary,
+  after-birth: $purple-primary,
+  finances: $green-primary,
+  advice: $orange-primary,
+  root: $blue-primary,
+  default: $blue-primary,
+);
+$dark-color-map: (
+  pregnancy: $blue-80,
+  birth: $pink-50,
+  after-birth: $purple-primary,
+  finances: $green-80,
+  advice: $orange-60,
+  root: $blue-80,
+  default: $blue-80,
+);
+$light-color-map: (
+  pregnancy: $blue-10,
+  birth: $pink-10,
+  after-birth: $purple-10,
+  finances: $green-10,
+  advice: $orange-10,
+  root: $blue-10,
+  default: $blue-10,
+);
+$slightlylighter-color-map: (
+  pregnancy: $blue-50,
+  birth: $pink-40,
+  after-birth: $purple-70,
+  finances: $green-60,
+  advice: $orange-50,
+  root: $blue-50,
+  default: $blue-50,
+);
+$topic-background-color-map: (
+  pregnancy: $blue-primary,
+  birth: $pink-40,
+  after-birth: $purple-40,
+  finances: $green-primary,
+  advice: $orange-50,
+  root: $blue-primary,
+  default: $blue-primary,
+);
+
+// TODO seperate this into smaller parts
+@mixin colorClass($name) {
+  &--#{$name} {
+    header,
+    .bx--header__menu,
+    .bx--header__menu-item:focus,
+    .bx--header__menu-title,
+    .bx--header__menu-title[aria-expanded="true"],
+    footer {
+      background-color: map-get($primary-color-map, $name) !important;
+
+      .bx--header__menu-item,
+      button {
+        &:hover, &:active {
+          background-color: map-get(
+            $slightlylighter-color-map,
+            $name
+          ) !important;
+        }
+      }
+    }
+    .bx--header__menu-item:focus {
+      border: 1px solid map-get($light-color-map, $name);
+    }
+
+    &--main-category__card {
+      background-color: map-get($topic-background-color-map, $name);
+    }
+
+    .bx--side-nav {
+      background-color: map-get($primary-color-map, $name);
+    }
+
+    .hedi--back-to-home {
+      background-color: map-get($primary-color-map, $name) !important;
+    }
+
+    .bx--header {
+      border-bottom-color: map-get($slightlylighter-color-map, $name);
+      &__action--active {
+        border-bottom-color: map-get($primary-color-map, $name);
+        border-left-color: map-get($slightlylighter-color-map, $name);
+        border-right-color: map-get($slightlylighter-color-map, $name);
+      }
+    }
+
+    .bx--header-panel {
+      background-color: map-get($primary-color-map, $name) !important;
+
+      .bx--switcher__item-link:hover {
+        background-color: map-get($slightlylighter-color-map, $name);
+      }
+    }
+
+    .hedi--article-page__content li::before {
+      color: map-get($primary-color-map, $name);
+    }
+
+    .hedi-article-container {
+      background-color: map-get($light-color-map, $name);
+    }
+    .hedi-auto-suggest {
+      background-color: map-get($primary-color-map, $name);
+    }
+
+    &--stroke {
+      border-top: 4px solid map-get($primary-color-map, $name);
+    }
+    &--scroll-to-top {
+      > button {
+        background-color: map-get($primary-color-map, $name) !important;
+        &:hover {
+          background-color: map-get(
+            $slightlylighter-color-map,
+            $name
+          ) !important;
+        }
+      }
+    }
+    // TODO makeappstyle better
+    article {
+      p,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5 {
+        &::selection {
+          background-color: map-get($light-color-map, $name);
+        }
+      }
+    }
+    &--article-entry__breadcrumb .hedi--breadcrumb__main-category .bx--link,
+    &--article-entry__breadcrumb .bx--breadcrumb-item {
+      color: map-get($dark-color-map, $name) !important;
+    }
+    .hedi--recommended-profiles__wrap {
+      background-color: map-get($light-color-map, $name);
+    }
+    .hedi--category-entry {
+      @include carbon--breakpoint-down("md") {
+        background-color: map-get($light-color-map, $name) !important;
+      }
+
+      &__text-wrap {
+        background-color: map-get($light-color-map, $name);
+        color: map-get($dark-color-map, $name);
+      }
+      @include carbon--breakpoint-down("md") {
+        .hedi--category-entry__image-wrap {
+          background-color: map-get($light-color-map, $name) !important;
+        }
+      }
+      &:hover {
+        .hedi--category-entry__image-wrap {
+          background-color: map-get($light-color-map, $name);
+        }
+        .hedi--category-entry__text-wrap {
+          background-color: map-get($primary-color-map, $name) !important;
+          color: #fff !important;
+        }
+      }
+    }
+  }
+}
+
+.hedi-category-color {
+  @include colorClass(pregnancy);
+  @include colorClass(birth);
+  @include colorClass(after-birth);
+  @include colorClass(finances);
+  @include colorClass(advice);
+  @include colorClass(root);
+  @include colorClass(default);
+}

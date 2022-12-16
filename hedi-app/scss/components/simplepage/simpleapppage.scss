@@ -1,0 +1,27 @@
+.hedi--simple-page {
+  .hedi--titlegroup {
+    p {
+      margin-block-end: $spacing-05;
+    }
+  }
+
+  .hedi-app-page-image-wrapper {
+    height: 100%;
+    align-self: center;
+  }
+
+  .hedi--app-page-image {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    img {
+      height: auto;
+      min-width: 80px;
+      max-height: 250px;
+    }
+  }
+
+
+
+}

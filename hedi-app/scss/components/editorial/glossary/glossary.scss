@@ -1,0 +1,103 @@
+@import "glossarylinkwithtooltip";
+
+.hedi--glossary {
+  &-page .bx--grid {
+    background-color: #fff;
+    // padding-top: $spacing-07;
+  }
+  &__group {
+    // &--title {
+    //   margin-top: $spacing-09;
+    // }
+    &--letter {
+      font-family: carbon--font-family("serif");
+      font-size: 4rem;
+      font-weight: 500;
+      // TODO change against carbon variable or something
+      color: $blue-primary;
+      margin-bottom: $spacing-02;
+      @include rtl-only() {
+        margin-bottom: $spacing-07;
+      }
+
+      &__item::before {
+        display: block;
+        content: " ";
+        margin-top: -47px;
+        height: 47px;
+        visibility: hidden;
+        pointer-events: none;
+      }
+    }
+    &__offset{
+      @include ltr-only() {
+        display: none;
+      }
+    }
+  }
+  &-term {
+    margin-bottom: $spacing-07;
+
+    &::before {
+      display: block;
+      content: " ";
+      margin-top: calc(-47px + (-1rem));
+      height: calc(47px + 1rem);
+      visibility: hidden;
+      pointer-events: none;
+    }
+    // &:target > div {
+    //   border-left: 4px solid $orange-40;
+    //   margin-left: -10px;
+    //   padding-left: 10px;
+    // }
+
+    &__marked-translation {
+      background-color: transparent;
+      color: $gray-50;
+      margin: 0 0 1.2rem 0;
+      font-style: italic;
+    }
+
+    &__marked-word {
+      h4 {
+        background-color: $orange-20;
+      }
+    }
+  }
+}
+
+.hedi--alphabet-label {
+  font-family: carbon--font-family("serif");
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 1.666em;
+  color: $gray-40;
+  margin: 0 0 0 $spacing-05;
+  &--disabled:hover {
+    cursor: not-allowed;
+  }
+}
+
+.hedi--alphabet-links {
+  font-family: carbon--font-family("serif");
+  font-weight: 400;
+  font-size: 1.5rem !important;
+  line-height: 1.666em !important;
+  color: $blue-primary;
+  margin: 0 0 0 $spacing-05;
+
+  &--wrap {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    z-index: 1;
+    &:first-of-type {
+      direction: ltr;
+    }
+  }
+  &--container {
+    margin-top: $spacing-07;
+  }
+}

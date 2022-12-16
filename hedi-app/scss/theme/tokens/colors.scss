@@ -1,0 +1,92 @@
+//
+// all options can be found here
+// https://www.carbondesignsystem.com/guidelines/themes/overview/#color
+//
+
+@mixin theme-colors {
+ 
+  // Beispiel einer selbst-definierten Variable
+  //$blut: $red-60 !global;
+ 
+  $focus: $blue-primary !global;
+  $interactive-01: $blue-primary !global;
+  $hover-primary: $blue-80 !global;
+  //$interactive-02: $cool-gray-60 !global;
+  //$hover-secondary: $cool-gray-50 !global;
+  $interactive-03: $blue-primary !global;
+  $hover-tertiary: $blue-primary !global;
+  $support-04: $blue-primary !global;
+  $interactive-01: $blue-primary !global;
+  // $interactive-02: #393939 !global;
+  $interactive-03: $blue-primary !global;
+  $interactive-04: $blue-50 !global; //für aktivierte Links
+  // $ui-background: #ffffff !global;
+  // $ui-01: #f4f4f4 !global;
+  // $ui-02: #ffffff !global;
+  // $ui-03: #e0e0e0 !global;
+  // $ui-04: #8d8d8d !global;
+  // $ui-05: #161616 !global;
+  // $text-01: #161616 !global;
+  // $text-02: #525252 !global;
+  // $text-03: #a8a8a8 !global;
+  // $text-04: #ffffff !global;
+  // $text-05: #6f6f6f !global;
+  $text-error: $pink-70 !global;
+  // $icon-01: #161616 !global;
+  // $icon-02: #525252 !global;
+  // $icon-03: #ffffff !global;
+    $link-01: $blue-60 !global;
+  //$inverse-link: $purple-30 !global;
+  // $field-01: #f4f4f4 !global;
+  // $field-02: #ffffff !global;
+  // $inverse-01: #ffffff !global;
+  // $inverse-02: #393939 !global;
+  $support-01: $pink-60 !global;
+  $support-02: $green-60 !global;
+  $support-03: $orange-40 !global;
+  $support-04: $blue-70 !global;
+
+  // Inverse Klassen für dark-mode Notifications
+  // $inverse-support-01: #fa4d56 !global;
+  // $inverse-support-02: #42be65 !global;
+  // $inverse-support-03: #f1c21b !global;
+  // $inverse-support-04: #4589ff !global;
+  // $overlay-01: rgba(22, 22, 22, 0.5) !global;
+  $danger-01: $pink-70 !global;
+  $danger-02: $pink-70 !global;
+  $focus: $blue-primary !global;
+  // $inverse-focus-ui: #ffffff !global;
+  $hover-primary: $blue-70 !global;
+  $active-primary: $blue-90 !global; // link geklickt Farbe
+  $hover-primary-text: $blue-80 !global; //link hover farbe
+  // $hover-secondary: #4c4c4c !global;
+  // $active-secondary: #6f6f6f !global;
+  $hover-tertiary: $blue-primary !global;
+  $active-tertiary: $blue-70 !global;
+  // $hover-ui: #e5e5e5 !global;
+  // $hover-light-ui: #e5e5e5 !global;
+  // $active-ui: #c6c6c6 !global;
+  // $active-light-ui: #c6c6c6 !global;
+  // $selected-ui: #e0e0e0 !global;
+  // $selected-light-ui: #e0e0e0 !global;
+  // $inverse-hover-ui: #4c4c4c !global;
+  // $hover-selected-ui: #cacaca !global;
+  $hover-danger: $pink-80 !global;
+  $active-danger: $pink-90 !global;
+  // $hover-row: #e5e5e5 !global;
+  $visited-link: $purple-60 !global;
+  // $disabled-01: #f4f4f4 !global;
+  // $disabled-02: #c6c6c6 !global;
+  // $disabled-03: #8d8d8d !global;
+  $highlight: $blue-10 !global;
+  // $decorative-01: #e0e0e0 !global;
+  // $button-separator: #e0e0e0 !global;
+  // $skeleton-01: #e5e5e5 !global;
+  // $skeleton-02: #c6c6c6 !global;
+  $brand-01: $blue-primary !global;
+  // $brand-02: #393939 !global;
+  $brand-03: $blue-primary !global;
+  // $active-01: #c6c6c6 !global;
+  // $hover-field: #e5e5e5 !global;
+  $danger: $pink-70 !global;
+}

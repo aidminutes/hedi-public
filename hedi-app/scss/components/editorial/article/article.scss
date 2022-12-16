@@ -1,0 +1,52 @@
+@import "./actionbar";
+@import "./articlepage";
+@import "./articleentry";
+
+article {
+  a,
+  .bx--link {
+    text-decoration: underline;
+  }
+}
+
+.hedi--article {
+  &__print {
+    &--no-profiles {
+      .hedi--related-profiles,
+      .hedi--related-profiles + div {
+        @media print {
+          display: none;
+        }
+      }
+    }
+    &--only-profiles {
+      .hedi--article-page__content {
+        @media print {
+          display: none;
+        }
+      }
+    }
+    &--profiles-and-article {
+      .hedi--related-profiles {
+        @media print {
+          page-break-before: always;
+        }
+      }
+    }
+    &--headline-only-profile {
+      @media print {
+        display: none;
+      }
+    }
+  }
+
+  &__back-to-root--link {
+    @include carbon--type-style("body-long-02");
+    margin: $spacing-03 0 $spacing-07;
+    @include hideInPrint();
+  }
+
+  .hedi__tag-list {
+    @include hideInPrint();
+  }
+}

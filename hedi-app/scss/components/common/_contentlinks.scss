@@ -1,0 +1,35 @@
+.hedi--link {
+  @include printExcluded {
+    &-glossary_term {
+      text-decoration: none;
+      text-decoration-style: dotted !important;
+      &::after {
+        content: url("../public/svg/information.svg");
+        margin: 0px 0px 0px 2px;
+        display: inline-block;
+        color: inherit;
+      }
+    }
+
+    &__weblink {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      @media screen {
+        max-width: 85%;
+      }
+    }
+
+    &-external {
+      svg {
+        fill: $blue-primary;
+      }
+      &::after {
+        content: url("../public/svg/launch.svg");
+        margin: 0px 0px 0px 2px;
+        font-size: 1.1rem;
+        display: inline-block;
+      }
+    }
+  }
+}

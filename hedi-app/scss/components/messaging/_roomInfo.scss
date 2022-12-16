@@ -1,0 +1,114 @@
+.hedi--msg-room-info {
+  background-color: #fff;
+  position: relative;
+  width: 100%;
+  margin-bottom: $spacing-02;
+
+  &-wrapper {
+    width: calc(100% - 3.5rem);
+  }
+
+  &-row {
+    margin: 0;
+  }
+
+  &:nth-last-child(1) {
+    .hedi--msg-room-info-separator {
+      display: none;
+    }
+  }
+
+  &-separator {
+    height: 1px;
+    // width: calc(100% - 5.5rem);
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    // margin-inline-end: 1rem;
+    // margin-inline-start: 4.5rem;
+    // background-color: rgba(42, 132, 198, 0.3);
+    background-color: $gray-10;
+    display: none;
+  }
+
+  .hedi--msg-room-info-profile-image {
+    margin-inline-end: 0.5rem;
+    height: 3rem;
+    width: 3rem;
+
+    img {
+      height: 3rem;
+      width: 3rem;
+      border-radius: 100%;
+      object-fit: cover;
+      border: .5px solid #2a84c6;
+      background-color: #f0f8ff;
+    }
+  }
+
+  .hedi--msg-room-info-user {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &-name {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      color: $blue-primary;
+    }
+
+    &-date {
+      font-size: 0.75rem;
+      white-space: nowrap;
+      color: $gray-40;
+    }
+  }
+
+  .unreadMessages {
+    height: 0.75rem;
+    width: 0.75rem;
+    border-radius: 100%;
+    background-color: #2a84c6;
+  }
+
+  .hedi--msg-room-info-last-message-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 0.25rem;
+  }
+
+  .hedi--msg-room-info-last-message {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-grow: 1;
+    color: #161616;
+
+    svg {
+      margin-inline-end: 0.25rem;
+    }
+
+    &-text {
+      margin-inline-end: 0.5rem;
+      flex-grow: 1;
+      width: 1px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 90%;
+
+      &.bold {
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+.hedi--rooms-view__intro-text {
+  p {
+    @include type-style("body-long-01");
+  }
+}

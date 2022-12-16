@@ -1,0 +1,19 @@
+.hedi--button-hint-text {
+  display: flex;
+  align-items: flex-end;
+
+  span {
+    // TODO use TOkens
+    margin-inline-start: 10px;
+    font-size: 0.9em;
+  }
+  @media (max-width: 769px) {
+    flex-direction: column;
+    align-items: flex-start;
+    div {
+      // TODO use TOkens
+      margin-inline-start: 0;
+      margin-block-start: 1rem;
+    }
+  }
+}

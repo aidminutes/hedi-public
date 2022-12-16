@@ -1,0 +1,30 @@
+.hedi--person-edit {
+  .bx--form-item {
+    margin-bottom: $spacing-05;
+    @include carbon--breakpoint-down("md") {
+      margin-bottom: $spacing-03;
+    }
+  }
+
+  &__intro-text {
+    margin-bottom: $spacing-09;
+    @include carbon--breakpoint-down("md") {
+      margin-bottom: $spacing-07;
+    }
+  }
+
+  &__explanation {
+    margin-bottom: $spacing-09;
+    @include carbon--breakpoint-down("md") {
+      margin-bottom: $spacing-05;
+    }
+  }
+}
+
+.hedi--profile__services__info-area,
+.hedi--profile-capacity__info-area {
+  margin-bottom: $spacing-09;
+  @include carbon--breakpoint-down("md") {
+    margin-bottom: $spacing-07;
+  }
+}

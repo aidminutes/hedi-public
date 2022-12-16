@@ -1,0 +1,59 @@
+.hedi--category-entry-list {
+  margin-bottom: $spacing-07;
+
+  @media (min-width: 672px) {
+    margin-bottom: $spacing-11;
+  }
+}
+
+.hedi--category-entry {
+  a {
+    text-decoration: none;
+    color: #000;
+  }
+
+  &__text-wrap {
+    @include carbon--breakpoint-down("md") {
+      width: 100%;
+      height: 96px;
+    }
+    h4 {
+      margin-top: 0;
+      position: relative;
+      top: $spacing-05;
+      left: $spacing-05;
+      right: unset;
+      @include carbon--breakpoint("md") {
+        margin-bottom: 1.25rem;
+        width: 85%;
+      }
+      @include carbon--breakpoint-down("md") {
+        left: 0;
+        width: 90%;
+      }
+      @include rtl-only() {
+        left: unset;
+        right: $spacing-05;
+      }
+    }
+  }
+
+  @media (min-width: 672px) {
+    .bx--aspect-ratio--4x3 {
+      padding: 0 1rem;
+    }
+  }
+
+  @media (max-width: 672px) {
+    margin-bottom: $spacing-03;
+    &__image-wrap {
+      max-width: $spacing-12;
+      max-height: $spacing-12;
+      margin: 0 $spacing-03;
+    }
+    > a {
+      display: flex;
+      align-items: center;
+    }
+  }
+}

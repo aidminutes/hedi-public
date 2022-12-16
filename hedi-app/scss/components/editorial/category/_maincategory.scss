@@ -1,0 +1,52 @@
+.hedi--main-category {
+  &__list {
+    margin: $spacing-05 0 $spacing-11 0;
+    > a {
+      display: block;
+      margin-bottom: $spacing-05;
+      text-decoration: none;
+    }
+  }
+
+  &__card {
+    height: $spacing-12;
+    padding: 0 $spacing-05;
+    @include carbon--breakpoint("md") {
+      height: 160px;
+      padding: 0;
+    }
+    > .bx--row {
+      height: 100%;
+    }
+    &:hover {
+      cursor: pointer;
+      filter: brightness(1.1);
+    }
+    &--image-wrap {
+      position: relative;
+      > div {
+        display: block!important;
+      }
+    }
+    &--text {
+      align-items: flex-end;
+      color: #fff;
+      display: flex;
+      height: 100%;
+      padding: $spacing-05 $spacing-05;
+      width: 100%;
+      p {
+        @include carbon--type-style("productive-heading-03");
+        font-weight: 400;
+        font-family: carbon--font-family("serif");
+      }
+      @include carbon--breakpoint("md") {
+        padding: $spacing-06 $spacing-07;
+        p {
+          @include carbon--type-style("productive-heading-05");
+          font-weight: 400;
+        }
+      }
+    }
+  }
+}

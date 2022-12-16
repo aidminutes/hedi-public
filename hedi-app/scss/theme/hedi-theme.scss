@@ -1,0 +1,19 @@
+//
+// Carbon Theming sandbox:
+// https://themes.carbondesignsystem.com/
+//
+@import "./tokens/paletti.scss";
+@import "carbon-components/scss/globals/scss/colors";
+@import "./tokens/fonts.scss";
+@import "./tokens/globals.scss";
+@import "./tokens/colors.scss";
+@import "./tokens/spacings.scss";
+@import "./tokens/typography.scss";
+
+@mixin hedi-theme {
+  @include theme-fonts;
+  @include theme-globals;
+  @include theme-colors;
+  @include theme-spacings;
+  @include theme-typography;
+}

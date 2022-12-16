@@ -1,0 +1,23 @@
+address {
+  white-space: pre;
+  overflow: hidden;
+  p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+.hedi--contact-info {
+  overflow: hidden;
+  > div {
+    display: flex;
+    align-items: center;
+    > a {
+      margin: 0 $spacing-03 0 0;
+    }
+  }
+  svg {
+    margin-inline-end: $spacing-03;
+  }
+}

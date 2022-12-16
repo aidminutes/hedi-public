@@ -1,0 +1,134 @@
+// @import "./theme/hedi-theme.scss";
+@import "./contentswitcher";
+@import "./languageskills";
+@import "./serviceselection";
+@import "./domains";
+@import "./consultationhours";
+
+.hedi--edit-profile {
+  // required to make the dropdowns visible tables
+  // cannot be set directly on the table, since the overflow is defined on a wrapping node
+
+  &__centered-row {
+    align-items: center;
+  }
+
+  &__profession {
+    .bx--form-item {
+      margin-top: $spacing-06;
+    }
+  }
+
+  &__intro-text {
+    margin-bottom: $spacing-09;
+  }
+  .hedi--group {
+    > fieldset > legend {
+      @extend h3;
+    }
+    fieldset > fieldset > legend {
+      @extend .only-for-screenreaders;
+    }
+
+    tbody label {
+      display: none;
+    }
+    &--language-skills {
+      .bx--data-table-content {
+        overflow-x: visible !important;
+      }
+    }
+
+    &--consultation-hours {
+      .bx--data-table-content {
+        overflow-x: visible !important;
+      }
+    }
+
+    &--profile-type {
+      // TODO implement via cms asset, see zip code
+      // background-image: url("../public/images/berufsgruppen.png");
+      // background-size: 25%;
+      // background-repeat: no-repeat;
+      // background-position-x: right;
+      // background-position-y: 46%;
+      width: 100%;
+      padding: $spacing-05;
+      margin-bottom: $spacing-07;
+      background-color: $blue-20;
+
+      h2 {
+        color: $blue-primary;
+      }
+      .bx--content-switcher {
+        max-width: 550px;
+      }
+      .bx--row {
+        max-width: 100%;
+      }
+    }
+
+    &--address {
+      .bx--number input[type="number"] {
+        min-width: auto;
+        padding-right: 0;
+      }
+      .bx--number__controls {
+        display: none;
+        button {
+          display: none;
+        }
+      }
+      .hedi--row-icon__wrap {
+        display: flex;
+        justify-content: flex-end;
+      }
+    }
+  }
+
+
+  table .bx--form-item {
+    margin-bottom: 0;
+  }
+
+  // .bx--label h2,
+  // h3,
+  // h4 {
+  //   color: black;
+  // }
+
+  .hedi--service-selection {
+    margin-bottom: $spacing-05;
+
+    &__head {
+      margin-bottom: 0;
+    }
+  }
+
+  .bx--tile--is-selected {
+    background-color: $blue-60;
+    color: white;
+    font-size: 1.1rem;
+    outline: 1px solid white;
+    outline-offset: -1px;
+  }
+
+  .is-expanded {
+    .hedi--service-selection__content {
+      margin-top: $spacing-05;
+    }
+  }
+
+  .bx--tile-input:checked + .bx--tile > .bx--tile__checkmark svg {
+    fill: white;
+  }
+
+  h4 {
+    padding-bottom: $spacing-05;
+  }
+  // TODO check if needed global
+  input,
+  textarea {
+    direction: ltr !important;
+  }
+}

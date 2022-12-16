@@ -1,0 +1,112 @@
+
+.hedi--msg-room-header {
+  direction: ltr;
+  background-color: #95C1E2;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem;
+
+  .deviceSelection {
+    .bx--modal-container {
+      top: 3rem;
+      height: calc(100% - 3rem);
+    }
+  }
+
+  .bx--form-item {
+    .withMarginTop {
+      margin-top: 1.5rem;
+    }
+  }
+
+  .hedi--msg-room-header-room-info {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+
+    .hedi--msg-room-header-profile-image {
+      margin-right: 0.5rem;
+      height: 3rem;
+      width: 3rem;
+      position: relative;
+
+      img {
+        height: 3rem;
+        width: 3rem;
+        border-radius: 100%;
+        object-fit: cover;
+        border: 1px solid #2a84c6;
+        background-color: #f0f8ff;
+      }
+
+
+      .hedi--msg-room-header-online-status {
+        height: 0.75rem;
+        width: 0.75rem;
+        border-radius: 100%;
+        flex-shrink: 0;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+
+        &.online {
+          background-color: #38BF02;
+        }
+
+        &.offline {
+          background-color: #C00B00;
+        }
+
+        &.busy {
+          background-color: #EDCA00;
+        }
+      }
+    }
+
+    .hedi--msg-room-header-user-name-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      margin-right: 0.5rem;
+    }
+
+    .hedi--msg-room-header-user-info{
+      overflow: hidden;
+    }
+
+    .hedi--msg-room-header-user-name {
+      font-family: "Roboto", "Noto Arabic", sans-serif;
+      font-size: 1rem;
+      font-weight: 500;
+      color: white;
+      margin: 0 0.5rem 0 0;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+
+    .hedi--msg-room-header-user-typing {
+      font-family: "Roboto", "Noto Arabic", sans-serif;
+      font-size: 0.75rem;
+      font-weight: 500;
+      color: rgba(255, 255, 255, 0.8);
+      margin: 0;
+    }
+  }
+
+  .hedi--msg-room-header-call-buttons {
+    display: flex;
+    align-items: center;
+
+    button {
+      margin: 0 0.75rem 0 0;
+
+      &:nth-last-child(1) {
+        margin: 0;
+      }
+    }
+  }
+}
+

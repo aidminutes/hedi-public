@@ -1,0 +1,59 @@
+.hedi--zip-code {
+  &__content {
+    background: white;
+    border-radius: 8px;
+    display: flex;
+    padding: $spacing-05;
+    @include carbon--breakpoint-down("md") {
+      border-radius: 0;
+    }
+  }
+  &__svg-container {
+    height: 180px;
+    width: 180px;
+    min-width: 180px;
+    background-image: url("../public/svg/zipcode_baby_01.svg");
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    background-size: 180px;
+    @include carbon--breakpoint-down("md") {
+      display: none;
+    }
+
+    &--error {
+      background-image: url("../public/svg/zipcode_baby_error.svg");
+    }
+  }
+  &__headline {
+    margin-bottom: $spacing-06;
+  }
+  &__subheadline {
+    display: flex;
+    align-items: center;
+    margin-bottom: $spacing-03;
+    @include carbon--breakpoint-down("md") {
+      flex-direction: column;
+    }
+    &__icon {
+      margin-inline-end: $spacing-03;
+    }
+  }
+  &__helper-text {
+    margin-bottom: $spacing-05;
+  }
+  &__input-container {
+    display: flex;
+    max-width: 520px;
+    &__button {
+      flex-shrink: 0;
+      align-self: flex-start;
+    }
+    .bx--btn {
+      padding-right: 12px;
+    }
+    .bx--text-input::placeholder {
+      @include carbon--font-family("sans");
+    }
+  }
+}

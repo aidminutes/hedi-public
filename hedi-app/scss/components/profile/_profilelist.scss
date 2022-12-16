@@ -1,0 +1,56 @@
+.hedi--profile-list {
+  .hedi--profile-entry {
+    margin-bottom: $spacing-04;
+  }
+
+  .bx--tile--clickable {
+    background-color: white;
+    margin: $spacing-05 0;
+    &.hedi--profile-list__item {
+      &--midwife {
+        $midwifeColor: $pink-60;
+        .hedi--profile-entry-image svg .cls-1 {
+          fill: $midwifeColor;
+        }
+      }
+      &--caregiver {
+        $caregiverColor: $green-60;
+        .hedi--profile-entry-image svg .cls-1 {
+          fill: $caregiverColor;
+        }
+      }
+    }
+
+    &:hover {
+      // TODO color token
+      background: #e5e5e5;
+    }
+
+    .hedi--profile-entry > div > div:not(:first-child),
+    .hedi--profile-entry--with-services {
+      background-color: transparent;
+    }
+  }
+
+  @include ltr-only() {
+    .hedi--profile-entry + svg {
+      position: absolute;
+      right: 1rem;
+      bottom: 1rem;
+    }
+  }
+  @include rtl-only() {
+    .hedi--profile-entry + svg {
+      position: absolute;
+      left: 1rem;
+      bottom: 1rem;
+      transform: rotate(180deg);
+    }
+  }
+
+  @media (max-width: 672px) {
+    .hedi--profile-entry-image {
+      max-width: 50%;
+    }
+  }
+}

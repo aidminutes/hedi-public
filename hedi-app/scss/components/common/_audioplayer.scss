@@ -1,0 +1,16 @@
+.hedi--audioplayer {
+  display: block;
+  height: 48px;
+  padding-bottom: $spacing-05;
+  position: sticky;
+  top: 6rem;
+  transition: all 0.5s;
+  width: 100%;
+
+  &--hidden {
+    display: none;
+    height: 0;
+  }
+
+  @include hideInPrint();
+}

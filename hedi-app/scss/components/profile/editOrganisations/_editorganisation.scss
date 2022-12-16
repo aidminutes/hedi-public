@@ -1,0 +1,49 @@
+.hedi--profileEditOrganisations {
+  &-page {
+    .bx--grid {
+      background-color: #fff;
+      padding-bottom: $spacing-12;
+      @include bxGridEnableFullwidthBackgroundColorHack();
+    }
+
+    .hedi--organisation-search-row {
+      padding-top: $spacing-05;
+      padding-bottom: $spacing-06;
+
+      // hack to let blue background be full-width
+      @include bxRowFullwidthBackgroundColor($blue-primary);
+      color: white;
+    }
+
+    .hedi--profile-edit-organisations {
+      &__headline {
+        margin: $spacing-08 0 $spacing-05;
+      }
+      &__subheadline {
+        margin: $spacing-05 0;
+
+        &.underline {
+          @media (min-width: 672px) {
+            padding: $spacing-03;
+            border-bottom: 1px solid $gray-40;
+            margin: $spacing-06 (-1 * $spacing-03) $spacing-03;
+          }
+        }
+      }
+    }
+
+    .bx--list-box--expanded .bx--list-box__menu {
+      max-height: 16rem;
+    }
+
+    .bx--list-box__menu-item {
+      height: 6.5rem;
+      background: white;
+
+      &__option {
+        overflow: visible;
+        border-color: transparent;
+      }
+    }
+  }
+}

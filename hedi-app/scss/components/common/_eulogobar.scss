@@ -1,0 +1,30 @@
+.hedi--eu-logo-bar {
+  background-color: white;
+  height: 101px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0 $spacing-07;
+
+  @include carbon--breakpoint("md") {
+    justify-content: flex-end;
+  }
+
+  @include carbon--breakpoint("lg") {
+    height: 74px;
+  }
+
+  &__eu-logo {
+    width: 65px;
+  }
+
+  &__europe-for-lower-saxony-logo {
+    width: 70px;
+    margin-inline-start: $spacing-07;
+  }
+
+  &__bfhd-logo {
+    width: 46px;
+    margin-inline-start: $spacing-07;
+  }
+}

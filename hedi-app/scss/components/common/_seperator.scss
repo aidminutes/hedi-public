@@ -1,0 +1,55 @@
+.hedi--separator {
+  display: block;
+  width: 100%;
+  border-top: 1px;
+  border-style: solid;
+  border-color: $cool-gray-20;
+  margin-bottom: $spacing-05;
+
+  &__dotted {
+    border-style: dotted;
+  }
+  &__groove {
+    border-style: groove;
+  }
+  &__double {
+    border-style: double;
+  }
+  &__dashed {
+    border-style: dashed;
+  }
+  &__blue {
+    border-color: $blue-20;
+  }
+  &__green {
+    border-color: $green-primary;
+  }
+  &__orange {
+    border-color: $orange-primary;
+  }
+  &__pink {
+    border-color: $pink-primary;
+  }
+  &__purple {
+    border-color: $purple-primary;
+  }
+  &__gray {
+    border-color: $gray-30;
+  }
+
+  &__s {
+    margin: $spacing-06 0;
+  }
+  &__m {
+    margin: $spacing-08 0;
+  }
+  &__l {
+    margin: 56px 0;
+    @include carbon--breakpoint-down("md") {
+      margin: $spacing-05 0;
+    }
+  }
+  &__xs {
+    margin:0;
+  }
+}

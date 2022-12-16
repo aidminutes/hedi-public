@@ -1,0 +1,11 @@
+.hedi--recommended-profiles {
+  &__wrap {
+    @media screen {
+      padding-top: $spacing-09;
+      padding-bottom: $spacing-12;
+    }
+  }
+  &__headline {
+    margin-bottom: $spacing-05;
+  }
+}

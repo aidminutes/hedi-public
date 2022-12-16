@@ -1,0 +1,72 @@
+.hedi--suggestion-entry {
+  &:hover {
+    cursor: pointer;
+  }
+  padding: $spacing-03;
+  p {
+    @include carbon--type-style("body-short-01");
+  }
+
+  h3{
+    font-size: 1.25rem;
+    margin: 0.5rem 0;
+  }
+
+  p:nth-child(2) {
+    font-weight: 500;
+  }
+  &--quicksearch {
+    border-right: 1px dotted $gray-30;
+    min-width: 160px;
+    > p {
+      @include carbon--type-style("body-short-01");
+      margin: 0;
+      max-width: 100%;
+    }
+    p:first-child {
+      display: block;
+    }
+    p:nth-child(2) {
+      display: block;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      width: 160px;
+    }
+  }
+  &--timeline {
+    background-color: #fff;
+    color: #000;
+    border-radius: 8px;
+    max-width: 320px;
+  }
+  &--article {
+    > p:first-child {
+      color: $blue-primary;
+    }
+  }
+  &--professional,
+  &--organisation {
+    > p:first-child {
+      color: $green-primary;
+    }
+  }
+  &--glossaryterm {
+    > p:first-child {
+      color: $orange-primary;
+    }
+  }
+
+  &--summary {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  &--glossaryterm-translation {
+    background-color: none;
+    color: $gray-50;
+    font-style: italic;
+  }
+}

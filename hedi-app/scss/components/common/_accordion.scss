@@ -1,0 +1,65 @@
+.hedi--accordion {
+  margin: $spacing-07 0;
+
+  .bx--accordion__item {
+    margin-bottom: $spacing-02;
+    @include carbon--breakpoint("md") {
+      margin-bottom: $spacing-03;
+    }
+    border: none;
+  }
+  &--with-border {
+    .bx--accordion__item {
+      border-top: 1px solid $gray-20;
+      &:last-child {
+        border-bottom: 1px solid $gray-20;
+      }
+    }
+  }
+
+  .bx--accordion__heading {
+    background-color: #fff;
+    padding: $spacing-05 0;
+  }
+
+  .bx--accordion__title {
+    font-size: 20px;
+    padding: 0 $spacing-05 0 0;
+    @include rtl-only() {
+      text-align: right;
+    }
+    @include carbon--breakpoint-down("md") {
+      @include type-style("body-long-02");
+    }
+  }
+
+  .bx--accordion__content {
+    padding-right: $spacing-05;
+  }
+
+  .bx--accordion__content > p,
+  .bx--accordion__content a {
+    @include type-style("body-long-02");
+  }
+  .bx--accordion__content > p {
+    margin-bottom: $spacing-05;
+  }
+
+  .bx--accordion__item--active .bx--accordion__content {
+    padding-bottom: $spacing-03;
+    padding-top: $spacing-05;
+  }
+
+  .bx--accordion__arrow {
+    transform: translateY(3px) rotate(-270deg) scale(1.7);
+    fill: $gray-50;
+    @include rtl-only() {
+      margin: 0 0 0 $spacing-05;
+    }
+  }
+
+  .bx--accordion__item--active .bx--accordion__arrow {
+    transform: translateY(3px) rotate(-90deg) scale(1.7);
+    fill: $gray-50;
+  }
+}
