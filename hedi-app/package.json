@@ -38,7 +38,7 @@
     "leaflet-defaulticon-compatibility": "^0.1.1",
     "link-preview-js": "2.1.8",
     "matrix-js-sdk": "^20.1.0",
-    "next": "12.1.0",
+    "next": "13.5.0",
     "next-auth": "4.0.2",
     "next-transpile-modules": "^9.0.0",
     "react": "17.0.2",
